@@ -39,7 +39,7 @@ s.copy(library / f'gapic-google-cloud-{service}-{version}/src', f'google-cloud-e
 s.copy(library / f'grpc-google-cloud-{service}-{version}/src', f'grpc-google-cloud-{service}-{version}/src')
 s.copy(library / f'proto-google-cloud-{service}-{version}/src', f'proto-google-cloud-{service}-{version}/src')
 
-java.format_code(f'google-cloud-{service}/src')
+java.format_code(f'google-cloud-errorreporting/src')
 java.format_code(f'grpc-google-cloud-{service}-{version}/src')
 java.format_code(f'proto-google-cloud-{service}-{version}/src')
 
