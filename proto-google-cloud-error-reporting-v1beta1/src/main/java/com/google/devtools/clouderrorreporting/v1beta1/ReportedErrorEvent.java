@@ -163,12 +163,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] Time when the event occurred.
+   * Optional. Time when the event occurred.
    * If not provided, the time when the event was received by the
    * Error Reporting system will be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp event_time = 1;</code>
+   * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public boolean hasEventTime() {
     return eventTime_ != null;
@@ -177,12 +178,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] Time when the event occurred.
+   * Optional. Time when the event occurred.
    * If not provided, the time when the event was received by the
    * Error Reporting system will be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp event_time = 1;</code>
+   * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public com.google.protobuf.Timestamp getEventTime() {
     return eventTime_ == null ? com.google.protobuf.Timestamp.getDefaultInstance() : eventTime_;
@@ -191,12 +193,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] Time when the event occurred.
+   * Optional. Time when the event occurred.
    * If not provided, the time when the event was received by the
    * Error Reporting system will be used.
    * </pre>
    *
-   * <code>.google.protobuf.Timestamp event_time = 1;</code>
+   * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder() {
     return getEventTime();
@@ -208,10 +211,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public boolean hasServiceContext() {
     return serviceContext_ != null;
@@ -220,10 +225,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.devtools.clouderrorreporting.v1beta1.ServiceContext getServiceContext() {
     return serviceContext_ == null
@@ -234,10 +241,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Required] The service context in which this error has occurred.
+   * Required. The service context in which this error has occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   public com.google.devtools.clouderrorreporting.v1beta1.ServiceContextOrBuilder
       getServiceContextOrBuilder() {
@@ -250,13 +259,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Required] A message describing the error. The message can contain an
-   * exception stack in one of the supported programming languages and formats.
-   * In that case, the message is parsed and detailed exception information
-   * is returned when retrieving the error event again.
+   * Required. The error message.
+   * If no `context.reportLocation` is provided, the message must contain a
+   * header (typically consisting of the exception type name and an error
+   * message) and an exception stack trace in one of the supported programming
+   * languages and formats.
+   * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+   * Supported stack trace formats are:
+   * * **Java**: Must be the return value of
+   * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+   * * **Python**: Must be the return value of
+   * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+   * * **JavaScript**: Must be the value of
+   * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+   * by V8.
+   * * **Ruby**: Must contain frames returned by
+   * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+   * * **C#**: Must be the return value of
+   * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+   * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+   * and contain the result of
+   * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+   * * **Go**: Must be the return value of
+   * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
    * </pre>
    *
-   * <code>string message = 3;</code>
+   * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public java.lang.String getMessage() {
     java.lang.Object ref = message_;
@@ -273,13 +301,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Required] A message describing the error. The message can contain an
-   * exception stack in one of the supported programming languages and formats.
-   * In that case, the message is parsed and detailed exception information
-   * is returned when retrieving the error event again.
+   * Required. The error message.
+   * If no `context.reportLocation` is provided, the message must contain a
+   * header (typically consisting of the exception type name and an error
+   * message) and an exception stack trace in one of the supported programming
+   * languages and formats.
+   * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+   * Supported stack trace formats are:
+   * * **Java**: Must be the return value of
+   * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+   * * **Python**: Must be the return value of
+   * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+   * * **JavaScript**: Must be the value of
+   * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+   * by V8.
+   * * **Ruby**: Must contain frames returned by
+   * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+   * * **C#**: Must be the return value of
+   * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+   * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+   * and contain the result of
+   * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+   * * **Go**: Must be the return value of
+   * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
    * </pre>
    *
-   * <code>string message = 3;</code>
+   * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   public com.google.protobuf.ByteString getMessageBytes() {
     java.lang.Object ref = message_;
@@ -299,10 +346,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public boolean hasContext() {
     return context_ != null;
@@ -311,10 +360,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public com.google.devtools.clouderrorreporting.v1beta1.ErrorContext getContext() {
     return context_ == null
@@ -325,10 +376,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
    *
    *
    * <pre>
-   * [Optional] A description of the context in which the error occurred.
+   * Optional. A description of the context in which the error occurred.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   public com.google.devtools.clouderrorreporting.v1beta1.ErrorContextOrBuilder
       getContextOrBuilder() {
@@ -756,12 +809,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public boolean hasEventTime() {
       return eventTimeBuilder_ != null || eventTime_ != null;
@@ -770,12 +824,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.protobuf.Timestamp getEventTime() {
       if (eventTimeBuilder_ == null) {
@@ -788,12 +843,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder setEventTime(com.google.protobuf.Timestamp value) {
       if (eventTimeBuilder_ == null) {
@@ -812,12 +868,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder setEventTime(com.google.protobuf.Timestamp.Builder builderForValue) {
       if (eventTimeBuilder_ == null) {
@@ -833,12 +890,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder mergeEventTime(com.google.protobuf.Timestamp value) {
       if (eventTimeBuilder_ == null) {
@@ -859,12 +917,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder clearEventTime() {
       if (eventTimeBuilder_ == null) {
@@ -881,12 +940,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.protobuf.Timestamp.Builder getEventTimeBuilder() {
 
@@ -897,12 +957,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.protobuf.TimestampOrBuilder getEventTimeOrBuilder() {
       if (eventTimeBuilder_ != null) {
@@ -915,12 +976,13 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] Time when the event occurred.
+     * Optional. Time when the event occurred.
      * If not provided, the time when the event was received by the
      * Error Reporting system will be used.
      * </pre>
      *
-     * <code>.google.protobuf.Timestamp event_time = 1;</code>
+     * <code>.google.protobuf.Timestamp event_time = 1 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.protobuf.Timestamp,
@@ -949,10 +1011,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public boolean hasServiceContext() {
       return serviceContextBuilder_ != null || serviceContext_ != null;
@@ -961,10 +1025,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ServiceContext getServiceContext() {
       if (serviceContextBuilder_ == null) {
@@ -979,10 +1045,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setServiceContext(
         com.google.devtools.clouderrorreporting.v1beta1.ServiceContext value) {
@@ -1002,10 +1070,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder setServiceContext(
         com.google.devtools.clouderrorreporting.v1beta1.ServiceContext.Builder builderForValue) {
@@ -1022,10 +1092,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder mergeServiceContext(
         com.google.devtools.clouderrorreporting.v1beta1.ServiceContext value) {
@@ -1050,10 +1122,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public Builder clearServiceContext() {
       if (serviceContextBuilder_ == null) {
@@ -1070,10 +1144,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ServiceContext.Builder
         getServiceContextBuilder() {
@@ -1085,10 +1161,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ServiceContextOrBuilder
         getServiceContextOrBuilder() {
@@ -1104,10 +1182,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] The service context in which this error has occurred.
+     * Required. The service context in which this error has occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ServiceContext service_context = 2 [(.google.api.field_behavior) = REQUIRED];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.devtools.clouderrorreporting.v1beta1.ServiceContext,
@@ -1131,13 +1211,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] A message describing the error. The message can contain an
-     * exception stack in one of the supported programming languages and formats.
-     * In that case, the message is parsed and detailed exception information
-     * is returned when retrieving the error event again.
+     * Required. The error message.
+     * If no `context.reportLocation` is provided, the message must contain a
+     * header (typically consisting of the exception type name and an error
+     * message) and an exception stack trace in one of the supported programming
+     * languages and formats.
+     * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+     * Supported stack trace formats are:
+     * * **Java**: Must be the return value of
+     * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+     * * **Python**: Must be the return value of
+     * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+     * * **JavaScript**: Must be the value of
+     * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+     * by V8.
+     * * **Ruby**: Must contain frames returned by
+     * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+     * * **C#**: Must be the return value of
+     * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+     * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+     * and contain the result of
+     * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+     * * **Go**: Must be the return value of
+     * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
      * </pre>
      *
-     * <code>string message = 3;</code>
+     * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public java.lang.String getMessage() {
       java.lang.Object ref = message_;
@@ -1154,13 +1253,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] A message describing the error. The message can contain an
-     * exception stack in one of the supported programming languages and formats.
-     * In that case, the message is parsed and detailed exception information
-     * is returned when retrieving the error event again.
+     * Required. The error message.
+     * If no `context.reportLocation` is provided, the message must contain a
+     * header (typically consisting of the exception type name and an error
+     * message) and an exception stack trace in one of the supported programming
+     * languages and formats.
+     * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+     * Supported stack trace formats are:
+     * * **Java**: Must be the return value of
+     * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+     * * **Python**: Must be the return value of
+     * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+     * * **JavaScript**: Must be the value of
+     * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+     * by V8.
+     * * **Ruby**: Must contain frames returned by
+     * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+     * * **C#**: Must be the return value of
+     * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+     * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+     * and contain the result of
+     * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+     * * **Go**: Must be the return value of
+     * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
      * </pre>
      *
-     * <code>string message = 3;</code>
+     * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public com.google.protobuf.ByteString getMessageBytes() {
       java.lang.Object ref = message_;
@@ -1177,13 +1295,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] A message describing the error. The message can contain an
-     * exception stack in one of the supported programming languages and formats.
-     * In that case, the message is parsed and detailed exception information
-     * is returned when retrieving the error event again.
+     * Required. The error message.
+     * If no `context.reportLocation` is provided, the message must contain a
+     * header (typically consisting of the exception type name and an error
+     * message) and an exception stack trace in one of the supported programming
+     * languages and formats.
+     * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+     * Supported stack trace formats are:
+     * * **Java**: Must be the return value of
+     * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+     * * **Python**: Must be the return value of
+     * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+     * * **JavaScript**: Must be the value of
+     * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+     * by V8.
+     * * **Ruby**: Must contain frames returned by
+     * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+     * * **C#**: Must be the return value of
+     * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+     * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+     * and contain the result of
+     * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+     * * **Go**: Must be the return value of
+     * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
      * </pre>
      *
-     * <code>string message = 3;</code>
+     * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setMessage(java.lang.String value) {
       if (value == null) {
@@ -1198,13 +1335,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] A message describing the error. The message can contain an
-     * exception stack in one of the supported programming languages and formats.
-     * In that case, the message is parsed and detailed exception information
-     * is returned when retrieving the error event again.
+     * Required. The error message.
+     * If no `context.reportLocation` is provided, the message must contain a
+     * header (typically consisting of the exception type name and an error
+     * message) and an exception stack trace in one of the supported programming
+     * languages and formats.
+     * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+     * Supported stack trace formats are:
+     * * **Java**: Must be the return value of
+     * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+     * * **Python**: Must be the return value of
+     * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+     * * **JavaScript**: Must be the value of
+     * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+     * by V8.
+     * * **Ruby**: Must contain frames returned by
+     * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+     * * **C#**: Must be the return value of
+     * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+     * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+     * and contain the result of
+     * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+     * * **Go**: Must be the return value of
+     * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
      * </pre>
      *
-     * <code>string message = 3;</code>
+     * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder clearMessage() {
 
@@ -1216,13 +1372,32 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Required] A message describing the error. The message can contain an
-     * exception stack in one of the supported programming languages and formats.
-     * In that case, the message is parsed and detailed exception information
-     * is returned when retrieving the error event again.
+     * Required. The error message.
+     * If no `context.reportLocation` is provided, the message must contain a
+     * header (typically consisting of the exception type name and an error
+     * message) and an exception stack trace in one of the supported programming
+     * languages and formats.
+     * Supported languages are Java, Python, JavaScript, Ruby, C#, PHP, and Go.
+     * Supported stack trace formats are:
+     * * **Java**: Must be the return value of
+     * [`Throwable.printStackTrace()`](https://docs.oracle.com/javase/7/docs/api/java/lang/Throwable.html#printStackTrace%28%29).
+     * * **Python**: Must be the return value of
+     * [`traceback.format_exc()`](https://docs.python.org/2/library/traceback.html#traceback.format_exc).
+     * * **JavaScript**: Must be the value of
+     * [`error.stack`](https://github.com/v8/v8/wiki/Stack-Trace-API) as returned
+     * by V8.
+     * * **Ruby**: Must contain frames returned by
+     * [`Exception.backtrace`](https://ruby-doc.org/core-2.2.0/Exception.html#method-i-backtrace).
+     * * **C#**: Must be the return value of
+     * [`Exception.ToString()`](https://msdn.microsoft.com/en-us/library/system.exception.tostring.aspx).
+     * * **PHP**: Must start with `PHP (Notice|Parse error|Fatal error|Warning)`
+     * and contain the result of
+     * [`(string)$exception`](http://php.net/manual/en/exception.tostring.php).
+     * * **Go**: Must be the return value of
+     * [`runtime.Stack()`](https://golang.org/pkg/runtime/debug/#Stack).
      * </pre>
      *
-     * <code>string message = 3;</code>
+     * <code>string message = 3 [(.google.api.field_behavior) = REQUIRED];</code>
      */
     public Builder setMessageBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -1245,10 +1420,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public boolean hasContext() {
       return contextBuilder_ != null || context_ != null;
@@ -1257,10 +1434,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorContext getContext() {
       if (contextBuilder_ == null) {
@@ -1275,10 +1454,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder setContext(com.google.devtools.clouderrorreporting.v1beta1.ErrorContext value) {
       if (contextBuilder_ == null) {
@@ -1297,10 +1478,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder setContext(
         com.google.devtools.clouderrorreporting.v1beta1.ErrorContext.Builder builderForValue) {
@@ -1317,10 +1500,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder mergeContext(
         com.google.devtools.clouderrorreporting.v1beta1.ErrorContext value) {
@@ -1344,10 +1529,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public Builder clearContext() {
       if (contextBuilder_ == null) {
@@ -1364,10 +1551,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorContext.Builder
         getContextBuilder() {
@@ -1379,10 +1568,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorContextOrBuilder
         getContextOrBuilder() {
@@ -1398,10 +1589,12 @@ public final class ReportedErrorEvent extends com.google.protobuf.GeneratedMessa
      *
      *
      * <pre>
-     * [Optional] A description of the context in which the error occurred.
+     * Optional. A description of the context in which the error occurred.
      * </pre>
      *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4;</code>
+     * <code>
+     * .google.devtools.clouderrorreporting.v1beta1.ErrorContext context = 4 [(.google.api.field_behavior) = OPTIONAL];
+     * </code>
      */
     private com.google.protobuf.SingleFieldBuilderV3<
             com.google.devtools.clouderrorreporting.v1beta1.ErrorContext,

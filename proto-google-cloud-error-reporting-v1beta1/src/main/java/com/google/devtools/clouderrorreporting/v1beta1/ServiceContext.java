@@ -184,6 +184,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Represents the source code version that the developer provided,
    * which could represent a version label or a Git SHA-1 hash, for example.
+   * For App Engine standard environment, the version is set to the version of
+   * the app.
    * </pre>
    *
    * <code>string version = 3;</code>
@@ -205,6 +207,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
    * <pre>
    * Represents the source code version that the developer provided,
    * which could represent a version label or a Git SHA-1 hash, for example.
+   * For App Engine standard environment, the version is set to the version of
+   * the app.
    * </pre>
    *
    * <code>string version = 3;</code>
@@ -751,6 +755,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Represents the source code version that the developer provided,
      * which could represent a version label or a Git SHA-1 hash, for example.
+     * For App Engine standard environment, the version is set to the version of
+     * the app.
      * </pre>
      *
      * <code>string version = 3;</code>
@@ -772,6 +778,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Represents the source code version that the developer provided,
      * which could represent a version label or a Git SHA-1 hash, for example.
+     * For App Engine standard environment, the version is set to the version of
+     * the app.
      * </pre>
      *
      * <code>string version = 3;</code>
@@ -793,6 +801,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Represents the source code version that the developer provided,
      * which could represent a version label or a Git SHA-1 hash, for example.
+     * For App Engine standard environment, the version is set to the version of
+     * the app.
      * </pre>
      *
      * <code>string version = 3;</code>
@@ -812,6 +822,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Represents the source code version that the developer provided,
      * which could represent a version label or a Git SHA-1 hash, for example.
+     * For App Engine standard environment, the version is set to the version of
+     * the app.
      * </pre>
      *
      * <code>string version = 3;</code>
@@ -828,6 +840,8 @@ public final class ServiceContext extends com.google.protobuf.GeneratedMessageV3
      * <pre>
      * Represents the source code version that the developer provided,
      * which could represent a version label or a Git SHA-1 hash, for example.
+     * For App Engine standard environment, the version is set to the version of
+     * the app.
      * </pre>
      *
      * <code>string version = 3;</code>

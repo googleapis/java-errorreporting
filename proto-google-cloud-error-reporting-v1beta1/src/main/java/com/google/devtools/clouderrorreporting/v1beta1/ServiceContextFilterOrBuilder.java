@@ -27,22 +27,22 @@ public interface ServiceContextFilterOrBuilder
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * </pre>
    *
-   * <code>string service = 2;</code>
+   * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   java.lang.String getService();
   /**
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * </pre>
    *
-   * <code>string service = 2;</code>
+   * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.protobuf.ByteString getServiceBytes();
 
@@ -50,22 +50,22 @@ public interface ServiceContextFilterOrBuilder
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
    * </pre>
    *
-   * <code>string version = 3;</code>
+   * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   java.lang.String getVersion();
   /**
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
    * </pre>
    *
-   * <code>string version = 3;</code>
+   * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.protobuf.ByteString getVersionBytes();
 
@@ -73,22 +73,22 @@ public interface ServiceContextFilterOrBuilder
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
    * </pre>
    *
-   * <code>string resource_type = 4;</code>
+   * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   java.lang.String getResourceType();
   /**
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
    * </pre>
    *
-   * <code>string resource_type = 4;</code>
+   * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.protobuf.ByteString getResourceTypeBytes();
 }

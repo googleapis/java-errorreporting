@@ -131,11 +131,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * </pre>
    *
-   * <code>string service = 2;</code>
+   * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public java.lang.String getService() {
     java.lang.Object ref = service_;
@@ -152,11 +152,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
    * </pre>
    *
-   * <code>string service = 2;</code>
+   * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public com.google.protobuf.ByteString getServiceBytes() {
     java.lang.Object ref = service_;
@@ -176,11 +176,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
    * </pre>
    *
-   * <code>string version = 3;</code>
+   * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public java.lang.String getVersion() {
     java.lang.Object ref = version_;
@@ -197,11 +197,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
    * </pre>
    *
-   * <code>string version = 3;</code>
+   * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public com.google.protobuf.ByteString getVersionBytes() {
     java.lang.Object ref = version_;
@@ -221,11 +221,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
    * </pre>
    *
-   * <code>string resource_type = 4;</code>
+   * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public java.lang.String getResourceType() {
     java.lang.Object ref = resourceType_;
@@ -242,11 +242,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
    *
    *
    * <pre>
-   * [Optional] The exact value to match against
+   * Optional. The exact value to match against
    * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
    * </pre>
    *
-   * <code>string resource_type = 4;</code>
+   * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   public com.google.protobuf.ByteString getResourceTypeBytes() {
     java.lang.Object ref = resourceType_;
@@ -627,11 +627,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
      * </pre>
      *
-     * <code>string service = 2;</code>
+     * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public java.lang.String getService() {
       java.lang.Object ref = service_;
@@ -648,11 +648,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
      * </pre>
      *
-     * <code>string service = 2;</code>
+     * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.protobuf.ByteString getServiceBytes() {
       java.lang.Object ref = service_;
@@ -669,11 +669,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
      * </pre>
      *
-     * <code>string service = 2;</code>
+     * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setService(java.lang.String value) {
       if (value == null) {
@@ -688,11 +688,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
      * </pre>
      *
-     * <code>string service = 2;</code>
+     * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearService() {
 
@@ -704,11 +704,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.service`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.service).
      * </pre>
      *
-     * <code>string service = 2;</code>
+     * <code>string service = 2 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setServiceBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -726,11 +726,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
      * </pre>
      *
-     * <code>string version = 3;</code>
+     * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public java.lang.String getVersion() {
       java.lang.Object ref = version_;
@@ -747,11 +747,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
      * </pre>
      *
-     * <code>string version = 3;</code>
+     * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.protobuf.ByteString getVersionBytes() {
       java.lang.Object ref = version_;
@@ -768,11 +768,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
      * </pre>
      *
-     * <code>string version = 3;</code>
+     * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setVersion(java.lang.String value) {
       if (value == null) {
@@ -787,11 +787,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
      * </pre>
      *
-     * <code>string version = 3;</code>
+     * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearVersion() {
 
@@ -803,11 +803,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.version`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.version).
      * </pre>
      *
-     * <code>string version = 3;</code>
+     * <code>string version = 3 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setVersionBytes(com.google.protobuf.ByteString value) {
       if (value == null) {
@@ -825,11 +825,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
      * </pre>
      *
-     * <code>string resource_type = 4;</code>
+     * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public java.lang.String getResourceType() {
       java.lang.Object ref = resourceType_;
@@ -846,11 +846,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
      * </pre>
      *
-     * <code>string resource_type = 4;</code>
+     * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public com.google.protobuf.ByteString getResourceTypeBytes() {
       java.lang.Object ref = resourceType_;
@@ -867,11 +867,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
      * </pre>
      *
-     * <code>string resource_type = 4;</code>
+     * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setResourceType(java.lang.String value) {
       if (value == null) {
@@ -886,11 +886,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
      * </pre>
      *
-     * <code>string resource_type = 4;</code>
+     * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder clearResourceType() {
 
@@ -902,11 +902,11 @@ public final class ServiceContextFilter extends com.google.protobuf.GeneratedMes
      *
      *
      * <pre>
-     * [Optional] The exact value to match against
+     * Optional. The exact value to match against
      * [`ServiceContext.resource_type`](/error-reporting/reference/rest/v1beta1/ServiceContext#FIELDS.resource_type).
      * </pre>
      *
-     * <code>string resource_type = 4;</code>
+     * <code>string resource_type = 4 [(.google.api.field_behavior) = OPTIONAL];</code>
      */
     public Builder setResourceTypeBytes(com.google.protobuf.ByteString value) {
       if (value == null) {

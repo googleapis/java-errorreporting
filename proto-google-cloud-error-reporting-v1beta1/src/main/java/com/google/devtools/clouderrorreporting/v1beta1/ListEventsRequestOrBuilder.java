@@ -27,28 +27,32 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Required] The resource name of the Google Cloud Platform project. Written
+   * Required. The resource name of the Google Cloud Platform project. Written
    * as `projects/` plus the
    * [Google Cloud Platform project
    * ID](https://support.google.com/cloud/answer/6158840).
    * Example: `projects/my-project-123`.
    * </pre>
    *
-   * <code>string project_name = 1;</code>
+   * <code>
+   * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+   * </code>
    */
   java.lang.String getProjectName();
   /**
    *
    *
    * <pre>
-   * [Required] The resource name of the Google Cloud Platform project. Written
+   * Required. The resource name of the Google Cloud Platform project. Written
    * as `projects/` plus the
    * [Google Cloud Platform project
    * ID](https://support.google.com/cloud/answer/6158840).
    * Example: `projects/my-project-123`.
    * </pre>
    *
-   * <code>string project_name = 1;</code>
+   * <code>
+   * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+   * </code>
    */
   com.google.protobuf.ByteString getProjectNameBytes();
 
@@ -56,20 +60,20 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Required] The group for which events shall be returned.
+   * Required. The group for which events shall be returned.
    * </pre>
    *
-   * <code>string group_id = 2;</code>
+   * <code>string group_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   java.lang.String getGroupId();
   /**
    *
    *
    * <pre>
-   * [Required] The group for which events shall be returned.
+   * Required. The group for which events shall be returned.
    * </pre>
    *
-   * <code>string group_id = 2;</code>
+   * <code>string group_id = 2 [(.google.api.field_behavior) = REQUIRED];</code>
    */
   com.google.protobuf.ByteString getGroupIdBytes();
 
@@ -77,12 +81,13 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] List only ErrorGroups which belong to a service context that
+   * Optional. List only ErrorGroups which belong to a service context that
    * matches the filter.
    * Data for all service contexts is returned if this field is not specified.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3;
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3 [(.google.api.field_behavior) = OPTIONAL];
    * </code>
    */
   boolean hasServiceFilter();
@@ -90,12 +95,13 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] List only ErrorGroups which belong to a service context that
+   * Optional. List only ErrorGroups which belong to a service context that
    * matches the filter.
    * Data for all service contexts is returned if this field is not specified.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3;
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3 [(.google.api.field_behavior) = OPTIONAL];
    * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter getServiceFilter();
@@ -103,12 +109,13 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] List only ErrorGroups which belong to a service context that
+   * Optional. List only ErrorGroups which belong to a service context that
    * matches the filter.
    * Data for all service contexts is returned if this field is not specified.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3;
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ServiceContextFilter service_filter = 3 [(.google.api.field_behavior) = OPTIONAL];
    * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.ServiceContextFilterOrBuilder
@@ -118,36 +125,42 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] List only data for the given time range.
+   * Optional. List only data for the given time range.
    * If not set a default time range is used. The field time_range_begin
    * in the response will specify the beginning of this time range.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   boolean hasTimeRange();
   /**
    *
    *
    * <pre>
-   * [Optional] List only data for the given time range.
+   * Optional. List only data for the given time range.
    * If not set a default time range is used. The field time_range_begin
    * in the response will specify the beginning of this time range.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange getTimeRange();
   /**
    *
    *
    * <pre>
-   * [Optional] List only data for the given time range.
+   * Optional. List only data for the given time range.
    * If not set a default time range is used. The field time_range_begin
    * in the response will specify the beginning of this time range.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.QueryTimeRange time_range = 4 [(.google.api.field_behavior) = OPTIONAL];
+   * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.QueryTimeRangeOrBuilder getTimeRangeOrBuilder();
 
@@ -155,10 +168,10 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] The maximum number of results to return per response.
+   * Optional. The maximum number of results to return per response.
    * </pre>
    *
-   * <code>int32 page_size = 6;</code>
+   * <code>int32 page_size = 6 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   int getPageSize();
 
@@ -166,20 +179,20 @@ public interface ListEventsRequestOrBuilder
    *
    *
    * <pre>
-   * [Optional] A `next_page_token` provided by a previous response.
+   * Optional. A `next_page_token` provided by a previous response.
    * </pre>
    *
-   * <code>string page_token = 7;</code>
+   * <code>string page_token = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   java.lang.String getPageToken();
   /**
    *
    *
    * <pre>
-   * [Optional] A `next_page_token` provided by a previous response.
+   * Optional. A `next_page_token` provided by a previous response.
    * </pre>
    *
-   * <code>string page_token = 7;</code>
+   * <code>string page_token = 7 [(.google.api.field_behavior) = OPTIONAL];</code>
    */
   com.google.protobuf.ByteString getPageTokenBytes();
 }

@@ -112,14 +112,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * [Required] The resource name of the Google Cloud Platform project. Written
+   * Required. The resource name of the Google Cloud Platform project. Written
    * as `projects/` plus the
    * [Google Cloud Platform project
    * ID](https://support.google.com/cloud/answer/6158840).
    * Example: `projects/my-project-123`.
    * </pre>
    *
-   * <code>string project_name = 1;</code>
+   * <code>
+   * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+   * </code>
    */
   public java.lang.String getProjectName() {
     java.lang.Object ref = projectName_;
@@ -136,14 +138,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
    *
    *
    * <pre>
-   * [Required] The resource name of the Google Cloud Platform project. Written
+   * Required. The resource name of the Google Cloud Platform project. Written
    * as `projects/` plus the
    * [Google Cloud Platform project
    * ID](https://support.google.com/cloud/answer/6158840).
    * Example: `projects/my-project-123`.
    * </pre>
    *
-   * <code>string project_name = 1;</code>
+   * <code>
+   * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+   * </code>
    */
   public com.google.protobuf.ByteString getProjectNameBytes() {
     java.lang.Object ref = projectName_;
@@ -489,14 +493,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * [Required] The resource name of the Google Cloud Platform project. Written
+     * Required. The resource name of the Google Cloud Platform project. Written
      * as `projects/` plus the
      * [Google Cloud Platform project
      * ID](https://support.google.com/cloud/answer/6158840).
      * Example: `projects/my-project-123`.
      * </pre>
      *
-     * <code>string project_name = 1;</code>
+     * <code>
+     * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+     * </code>
      */
     public java.lang.String getProjectName() {
       java.lang.Object ref = projectName_;
@@ -513,14 +519,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * [Required] The resource name of the Google Cloud Platform project. Written
+     * Required. The resource name of the Google Cloud Platform project. Written
      * as `projects/` plus the
      * [Google Cloud Platform project
      * ID](https://support.google.com/cloud/answer/6158840).
      * Example: `projects/my-project-123`.
      * </pre>
      *
-     * <code>string project_name = 1;</code>
+     * <code>
+     * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+     * </code>
      */
     public com.google.protobuf.ByteString getProjectNameBytes() {
       java.lang.Object ref = projectName_;
@@ -537,14 +545,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * [Required] The resource name of the Google Cloud Platform project. Written
+     * Required. The resource name of the Google Cloud Platform project. Written
      * as `projects/` plus the
      * [Google Cloud Platform project
      * ID](https://support.google.com/cloud/answer/6158840).
      * Example: `projects/my-project-123`.
      * </pre>
      *
-     * <code>string project_name = 1;</code>
+     * <code>
+     * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+     * </code>
      */
     public Builder setProjectName(java.lang.String value) {
       if (value == null) {
@@ -559,14 +569,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * [Required] The resource name of the Google Cloud Platform project. Written
+     * Required. The resource name of the Google Cloud Platform project. Written
      * as `projects/` plus the
      * [Google Cloud Platform project
      * ID](https://support.google.com/cloud/answer/6158840).
      * Example: `projects/my-project-123`.
      * </pre>
      *
-     * <code>string project_name = 1;</code>
+     * <code>
+     * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+     * </code>
      */
     public Builder clearProjectName() {
 
@@ -578,14 +590,16 @@ public final class DeleteEventsRequest extends com.google.protobuf.GeneratedMess
      *
      *
      * <pre>
-     * [Required] The resource name of the Google Cloud Platform project. Written
+     * Required. The resource name of the Google Cloud Platform project. Written
      * as `projects/` plus the
      * [Google Cloud Platform project
      * ID](https://support.google.com/cloud/answer/6158840).
      * Example: `projects/my-project-123`.
      * </pre>
      *
-     * <code>string project_name = 1;</code>
+     * <code>
+     * string project_name = 1 [(.google.api.field_behavior) = REQUIRED, (.google.api.resource_reference) = { ... }
+     * </code>
      */
     public Builder setProjectNameBytes(com.google.protobuf.ByteString value) {
       if (value == null) {

@@ -27,30 +27,36 @@ public interface UpdateGroupRequestOrBuilder
    *
    *
    * <pre>
-   * [Required] The group which replaces the resource on the server.
+   * Required. The group which replaces the resource on the server.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   boolean hasGroup();
   /**
    *
    *
    * <pre>
-   * [Required] The group which replaces the resource on the server.
+   * Required. The group which replaces the resource on the server.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup getGroup();
   /**
    *
    *
    * <pre>
-   * [Required] The group which replaces the resource on the server.
+   * Required. The group which replaces the resource on the server.
    * </pre>
    *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1;</code>
+   * <code>
+   * .google.devtools.clouderrorreporting.v1beta1.ErrorGroup group = 1 [(.google.api.field_behavior) = REQUIRED];
+   * </code>
    */
   com.google.devtools.clouderrorreporting.v1beta1.ErrorGroupOrBuilder getGroupOrBuilder();
 }
