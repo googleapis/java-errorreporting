@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- see http://www.mojohaus.org/clirr-maven-plugin/examples/ignored-differences.html -->
+<differences>
+  <!-- TODO: remove after 0.118.0 release -->
+  <difference>
+    <differenceType>7005</differenceType>
+    <className>com/google/cloud/errorreporting/v1beta1/ErrorGroupServiceClient</className>
+    <method>com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup getGroup(com.google.devtools.clouderrorreporting.v1beta1.GroupName)</method>
+    <to>com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup getGroup(com.google.devtools.clouderrorreporting.v1beta1.ErrorGroupName)</to>
+  </difference>
+</differences>
