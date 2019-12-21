@@ -32,6 +32,7 @@ import io.grpc.StatusRuntimeException;
 import java.io.IOException;
 import java.util.Arrays;
 import java.util.List;
+import java.util.UUID;
 import org.junit.After;
 import org.junit.AfterClass;
 import org.junit.Assert;
@@ -41,8 +42,8 @@ import org.junit.Test;
 
 @javax.annotation.Generated("by GAPIC")
 public class ReportErrorsServiceClientTest {
-  private static MockErrorGroupService mockErrorGroupService;
   private static MockErrorStatsService mockErrorStatsService;
+  private static MockErrorGroupService mockErrorGroupService;
   private static MockReportErrorsService mockReportErrorsService;
   private static MockServiceHelper serviceHelper;
   private ReportErrorsServiceClient client;
@@ -50,14 +51,14 @@ public class ReportErrorsServiceClientTest {
 
   @BeforeClass
   public static void startStaticServer() {
-    mockErrorGroupService = new MockErrorGroupService();
     mockErrorStatsService = new MockErrorStatsService();
+    mockErrorGroupService = new MockErrorGroupService();
     mockReportErrorsService = new MockReportErrorsService();
     serviceHelper =
         new MockServiceHelper(
-            "in-process-1",
+            UUID.randomUUID().toString(),
             Arrays.<MockGrpcService>asList(
-                mockErrorGroupService, mockErrorStatsService, mockReportErrorsService));
+                mockErrorStatsService, mockErrorGroupService, mockReportErrorsService));
     serviceHelper.start();
   }
 
