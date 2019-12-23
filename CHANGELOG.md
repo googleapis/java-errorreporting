@@ -1,5 +1,12 @@
 # Changelog
 
+### [0.118.2](https://www.github.com/googleapis/java-errorreporting/compare/v0.118.1...v0.118.2) (2019-12-23)
+
+
+### Dependencies
+
+* update dependency io.grpc:grpc-bom to v1.26.0 ([f939c9d](https://www.github.com/googleapis/java-errorreporting/commit/f939c9d741de27f419c01b907401fc952d188821))
+
 ### [0.118.1](https://www.github.com/googleapis/java-errorreporting/compare/v0.118.0...v0.118.1) (2019-12-06)
 
 
