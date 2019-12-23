@@ -23,6 +23,7 @@ import com.google.cloud.errorreporting.v1beta1.stub.ErrorGroupServiceStubSetting
 import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup;
 import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroupName;
 import com.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest;
+import com.google.devtools.clouderrorreporting.v1beta1.GroupName;
 import com.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -147,6 +148,38 @@ public class ErrorGroupServiceClient implements BackgroundResource {
   @BetaApi("A restructuring of stub classes is planned, so this may break in the future")
   public ErrorGroupServiceStub getStub() {
     return stub;
+  }
+
+  // Inserted by synthtool to preserve backwards-compatibility
+  /**
+   * Get the specified group.
+   *
+   * <p>Sample code:
+   *
+   * <pre><code>
+   * try (ErrorGroupServiceClient errorGroupServiceClient = ErrorGroupServiceClient.create()) {
+   *   GroupName groupName = GroupName.of("[PROJECT]", "[GROUP]");
+   *   ErrorGroup response = errorGroupServiceClient.getGroup(groupName);
+   * }
+   * </code></pre>
+   *
+   * @param groupName Required. The group resource name. Written as
+   *     &lt;code&gt;projects/&lt;var&gt;projectID&lt;/var&gt;/groups/&lt;var&gt;group_name&lt;/var&gt;&lt;/code&gt;.
+   *     Call &lt;a href="/error-reporting/reference/rest/v1beta1/projects.groupStats/list"&gt;
+   *     &lt;code&gt;groupStats.list&lt;/code&gt;&lt;/a&gt; to return a list of groups belonging to
+   *     this project.
+   *     <p>Example: &lt;code&gt;projects/my-project-123/groups/my-group&lt;/code&gt;
+   * @throws com.google.api.gax.rpc.ApiException if the remote call fails
+   * @deprecated Use ErrorGroupServiceClient#getGroup(ErrorGroupName)
+   */
+  @Deprecated
+  public final ErrorGroup getGroup(GroupName groupName) {
+
+    GetGroupRequest request =
+        GetGroupRequest.newBuilder()
+            .setGroupName(groupName == null ? null : groupName.toString())
+            .build();
+    return getGroup(request);
   }
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD
