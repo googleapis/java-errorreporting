@@ -42,8 +42,8 @@ import org.junit.Test;
 
 @javax.annotation.Generated("by GAPIC")
 public class ReportErrorsServiceClientTest {
-  private static MockErrorGroupService mockErrorGroupService;
   private static MockErrorStatsService mockErrorStatsService;
+  private static MockErrorGroupService mockErrorGroupService;
   private static MockReportErrorsService mockReportErrorsService;
   private static MockServiceHelper serviceHelper;
   private ReportErrorsServiceClient client;
@@ -51,14 +51,14 @@ public class ReportErrorsServiceClientTest {
 
   @BeforeClass
   public static void startStaticServer() {
-    mockErrorGroupService = new MockErrorGroupService();
     mockErrorStatsService = new MockErrorStatsService();
+    mockErrorGroupService = new MockErrorGroupService();
     mockReportErrorsService = new MockReportErrorsService();
     serviceHelper =
         new MockServiceHelper(
             UUID.randomUUID().toString(),
             Arrays.<MockGrpcService>asList(
-                mockErrorGroupService, mockErrorStatsService, mockReportErrorsService));
+                mockErrorStatsService, mockErrorGroupService, mockReportErrorsService));
     serviceHelper.start();
   }
 
