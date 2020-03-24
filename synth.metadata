@@ -1,13 +1,6 @@
 {
-  "updateTime": "2020-03-24T09:04:27.718884Z",
+  "updateTime": "2020-03-24T09:05:41.458565Z",
   "sources": [
-    {
-      "generator": {
-        "name": "artman",
-        "version": "1.1.1",
-        "dockerImage": "googleapis/artman@sha256:5ef340c8d9334719bc5c6981d95f4a5d2737b0a6a24f2b9a0d430e96fff85c5b"
-      }
-    },
     {
       "git": {
         "name": "googleapis",
@@ -28,11 +21,10 @@
     {
       "client": {
         "source": "googleapis",
-        "apiName": "error-reporting",
+        "apiName": "devtools-clouderrorreporting",
         "apiVersion": "v1beta1",
         "language": "java",
-        "generator": "gapic",
-        "config": "google/devtools/clouderrorreporting/artman_errorreporting.yaml"
+        "generator": "bazel"
       }
     }
   ]
