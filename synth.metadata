@@ -1,6 +1,13 @@
 {
-  "updateTime": "2020-04-06T23:30:06.195417Z",
+  "updateTime": "2020-04-09T00:34:39.471293Z",
   "sources": [
+    {
+      "git": {
+        "name": ".",
+        "remote": "https://github.com/googleapis/java-errorreporting.git",
+        "sha": "da62c1f3eef333d372caa9bca8bceb5bab562b5a"
+      }
+    },
     {
       "git": {
         "name": "googleapis",
