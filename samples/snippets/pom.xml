@@ -59,7 +59,7 @@
       <version>1.0.1</version>
       <scope>test</scope>
     </dependency>
-    <!-- BEGIN_EXCLUDE -->
+    <!-- END_EXCLUDE -->
   </dependencies>
   <!-- [END clouderrorreporting_install_with_bom] -->
 </project>
