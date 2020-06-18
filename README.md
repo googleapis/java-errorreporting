@@ -89,6 +89,16 @@ use this Stackdriver Error Reporting Client Library.
 
 
 
+## Samples
+
+Samples are in the [`samples/`](https://github.com/googleapis/java-errorreporting/tree/master/samples) directory. The samples' `README.md`
+has instructions for running the samples.
+
+| Sample                      | Source Code                       | Try it |
+| --------------------------- | --------------------------------- | ------ |
+| Quick Start | [source code](https://github.com/googleapis/java-errorreporting/blob/master/samples/snippets/src/main/java/com/example/errorreporting/QuickStart.java) | [![Open in Cloud Shell][shell_img]](https://console.cloud.google.com/cloudshell/open?git_repo=https://github.com/googleapis/java-errorreporting&page=editor&open_in_editor=samples/snippets/src/main/java/com/example/errorreporting/QuickStart.java) |
+
+
 
 ## Troubleshooting
 
