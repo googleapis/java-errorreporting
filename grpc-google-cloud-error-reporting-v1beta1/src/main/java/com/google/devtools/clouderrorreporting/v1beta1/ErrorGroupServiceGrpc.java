@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * Service for retrieving and updating individual error groups.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/clouderrorreporting/v1beta1/error_group_service.proto")
@@ -175,22 +169,10 @@ public final class ErrorGroupServiceGrpc {
     return ErrorGroupServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service for retrieving and updating individual error groups.
-   * </pre>
-   */
+  /** */
   public abstract static class ErrorGroupServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Get the specified group.
-     * </pre>
-     */
+    /** */
     public void getGroup(
         com.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
@@ -198,14 +180,7 @@ public final class ErrorGroupServiceGrpc {
       asyncUnimplementedUnaryCall(getGetGroupMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replace the data for the specified group.
-     * Fails if the group does not exist.
-     * </pre>
-     */
+    /** */
     public void updateGroup(
         com.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
@@ -234,13 +209,7 @@ public final class ErrorGroupServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service for retrieving and updating individual error groups.
-   * </pre>
-   */
+  /** */
   public static final class ErrorGroupServiceStub
       extends io.grpc.stub.AbstractAsyncStub<ErrorGroupServiceStub> {
     private ErrorGroupServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -253,13 +222,7 @@ public final class ErrorGroupServiceGrpc {
       return new ErrorGroupServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Get the specified group.
-     * </pre>
-     */
+    /** */
     public void getGroup(
         com.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
@@ -268,14 +231,7 @@ public final class ErrorGroupServiceGrpc {
           getChannel().newCall(getGetGroupMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replace the data for the specified group.
-     * Fails if the group does not exist.
-     * </pre>
-     */
+    /** */
     public void updateGroup(
         com.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest request,
         io.grpc.stub.StreamObserver<com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
@@ -287,13 +243,7 @@ public final class ErrorGroupServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service for retrieving and updating individual error groups.
-   * </pre>
-   */
+  /** */
   public static final class ErrorGroupServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ErrorGroupServiceBlockingStub> {
     private ErrorGroupServiceBlockingStub(
@@ -307,39 +257,20 @@ public final class ErrorGroupServiceGrpc {
       return new ErrorGroupServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Get the specified group.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup getGroup(
         com.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest request) {
       return blockingUnaryCall(getChannel(), getGetGroupMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replace the data for the specified group.
-     * Fails if the group does not exist.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup updateGroup(
         com.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest request) {
       return blockingUnaryCall(getChannel(), getUpdateGroupMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * Service for retrieving and updating individual error groups.
-   * </pre>
-   */
+  /** */
   public static final class ErrorGroupServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<ErrorGroupServiceFutureStub> {
     private ErrorGroupServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -352,27 +283,14 @@ public final class ErrorGroupServiceGrpc {
       return new ErrorGroupServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Get the specified group.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
         getGroup(com.google.devtools.clouderrorreporting.v1beta1.GetGroupRequest request) {
       return futureUnaryCall(getChannel().newCall(getGetGroupMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Replace the data for the specified group.
-     * Fails if the group does not exist.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup>
         updateGroup(com.google.devtools.clouderrorreporting.v1beta1.UpdateGroupRequest request) {

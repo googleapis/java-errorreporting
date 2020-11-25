@@ -22,13 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * An API for reporting error events.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/clouderrorreporting/v1beta1/report_errors_service.proto")
@@ -129,28 +123,10 @@ public final class ReportErrorsServiceGrpc {
     return ReportErrorsServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for reporting error events.
-   * </pre>
-   */
+  /** */
   public abstract static class ReportErrorsServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Report an individual error event.
-     * This endpoint accepts **either** an OAuth token,
-     * **or** an [API key](https://support.google.com/cloud/answer/6158862)
-     * for authentication. To use an API key, append it to the URL as the value of
-     * a `key` parameter. For example:
-     * `POST
-     * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
-     * </pre>
-     */
+    /** */
     public void reportErrorEvent(
         com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest request,
         io.grpc.stub.StreamObserver<
@@ -173,13 +149,7 @@ public final class ReportErrorsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for reporting error events.
-   * </pre>
-   */
+  /** */
   public static final class ReportErrorsServiceStub
       extends io.grpc.stub.AbstractAsyncStub<ReportErrorsServiceStub> {
     private ReportErrorsServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -192,19 +162,7 @@ public final class ReportErrorsServiceGrpc {
       return new ReportErrorsServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Report an individual error event.
-     * This endpoint accepts **either** an OAuth token,
-     * **or** an [API key](https://support.google.com/cloud/answer/6158862)
-     * for authentication. To use an API key, append it to the URL as the value of
-     * a `key` parameter. For example:
-     * `POST
-     * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
-     * </pre>
-     */
+    /** */
     public void reportErrorEvent(
         com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest request,
         io.grpc.stub.StreamObserver<
@@ -217,13 +175,7 @@ public final class ReportErrorsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for reporting error events.
-   * </pre>
-   */
+  /** */
   public static final class ReportErrorsServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ReportErrorsServiceBlockingStub> {
     private ReportErrorsServiceBlockingStub(
@@ -237,19 +189,7 @@ public final class ReportErrorsServiceGrpc {
       return new ReportErrorsServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Report an individual error event.
-     * This endpoint accepts **either** an OAuth token,
-     * **or** an [API key](https://support.google.com/cloud/answer/6158862)
-     * for authentication. To use an API key, append it to the URL as the value of
-     * a `key` parameter. For example:
-     * `POST
-     * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse
         reportErrorEvent(
             com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest request) {
@@ -258,13 +198,7 @@ public final class ReportErrorsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for reporting error events.
-   * </pre>
-   */
+  /** */
   public static final class ReportErrorsServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<ReportErrorsServiceFutureStub> {
     private ReportErrorsServiceFutureStub(
@@ -278,19 +212,7 @@ public final class ReportErrorsServiceGrpc {
       return new ReportErrorsServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Report an individual error event.
-     * This endpoint accepts **either** an OAuth token,
-     * **or** an [API key](https://support.google.com/cloud/answer/6158862)
-     * for authentication. To use an API key, append it to the URL as the value of
-     * a `key` parameter. For example:
-     * `POST
-     * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse>
         reportErrorEvent(

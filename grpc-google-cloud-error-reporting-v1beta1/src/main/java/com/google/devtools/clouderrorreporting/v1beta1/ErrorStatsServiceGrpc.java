@@ -22,14 +22,7 @@ import static io.grpc.stub.ClientCalls.futureUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnaryCall;
 import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
-/**
- *
- *
- * <pre>
- * An API for retrieving and managing error statistics as well as data for
- * individual events.
- * </pre>
- */
+/** */
 @javax.annotation.Generated(
     value = "by gRPC proto compiler",
     comments = "Source: google/devtools/clouderrorreporting/v1beta1/error_stats_service.proto")
@@ -223,23 +216,10 @@ public final class ErrorStatsServiceGrpc {
     return ErrorStatsServiceFutureStub.newStub(factory, channel);
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for retrieving and managing error statistics as well as data for
-   * individual events.
-   * </pre>
-   */
+  /** */
   public abstract static class ErrorStatsServiceImplBase implements io.grpc.BindableService {
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified groups.
-     * </pre>
-     */
+    /** */
     public void listGroupStats(
         com.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest request,
         io.grpc.stub.StreamObserver<
@@ -248,13 +228,7 @@ public final class ErrorStatsServiceGrpc {
       asyncUnimplementedUnaryCall(getListGroupStatsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified events.
-     * </pre>
-     */
+    /** */
     public void listEvents(
         com.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest request,
         io.grpc.stub.StreamObserver<
@@ -263,13 +237,7 @@ public final class ErrorStatsServiceGrpc {
       asyncUnimplementedUnaryCall(getListEventsMethod(), responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes all error events of a given project.
-     * </pre>
-     */
+    /** */
     public void deleteEvents(
         com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest request,
         io.grpc.stub.StreamObserver<
@@ -306,14 +274,7 @@ public final class ErrorStatsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for retrieving and managing error statistics as well as data for
-   * individual events.
-   * </pre>
-   */
+  /** */
   public static final class ErrorStatsServiceStub
       extends io.grpc.stub.AbstractAsyncStub<ErrorStatsServiceStub> {
     private ErrorStatsServiceStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -326,13 +287,7 @@ public final class ErrorStatsServiceGrpc {
       return new ErrorStatsServiceStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified groups.
-     * </pre>
-     */
+    /** */
     public void listGroupStats(
         com.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest request,
         io.grpc.stub.StreamObserver<
@@ -344,13 +299,7 @@ public final class ErrorStatsServiceGrpc {
           responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified events.
-     * </pre>
-     */
+    /** */
     public void listEvents(
         com.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest request,
         io.grpc.stub.StreamObserver<
@@ -360,13 +309,7 @@ public final class ErrorStatsServiceGrpc {
           getChannel().newCall(getListEventsMethod(), getCallOptions()), request, responseObserver);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes all error events of a given project.
-     * </pre>
-     */
+    /** */
     public void deleteEvents(
         com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest request,
         io.grpc.stub.StreamObserver<
@@ -379,14 +322,7 @@ public final class ErrorStatsServiceGrpc {
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for retrieving and managing error statistics as well as data for
-   * individual events.
-   * </pre>
-   */
+  /** */
   public static final class ErrorStatsServiceBlockingStub
       extends io.grpc.stub.AbstractBlockingStub<ErrorStatsServiceBlockingStub> {
     private ErrorStatsServiceBlockingStub(
@@ -400,51 +336,26 @@ public final class ErrorStatsServiceGrpc {
       return new ErrorStatsServiceBlockingStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified groups.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse listGroupStats(
         com.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsRequest request) {
       return blockingUnaryCall(getChannel(), getListGroupStatsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified events.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.ListEventsResponse listEvents(
         com.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest request) {
       return blockingUnaryCall(getChannel(), getListEventsMethod(), getCallOptions(), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes all error events of a given project.
-     * </pre>
-     */
+    /** */
     public com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsResponse deleteEvents(
         com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest request) {
       return blockingUnaryCall(getChannel(), getDeleteEventsMethod(), getCallOptions(), request);
     }
   }
 
-  /**
-   *
-   *
-   * <pre>
-   * An API for retrieving and managing error statistics as well as data for
-   * individual events.
-   * </pre>
-   */
+  /** */
   public static final class ErrorStatsServiceFutureStub
       extends io.grpc.stub.AbstractFutureStub<ErrorStatsServiceFutureStub> {
     private ErrorStatsServiceFutureStub(io.grpc.Channel channel, io.grpc.CallOptions callOptions) {
@@ -457,13 +368,7 @@ public final class ErrorStatsServiceGrpc {
       return new ErrorStatsServiceFutureStub(channel, callOptions);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified groups.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.ListGroupStatsResponse>
         listGroupStats(
@@ -472,13 +377,7 @@ public final class ErrorStatsServiceGrpc {
           getChannel().newCall(getListGroupStatsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Lists the specified events.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.ListEventsResponse>
         listEvents(com.google.devtools.clouderrorreporting.v1beta1.ListEventsRequest request) {
@@ -486,13 +385,7 @@ public final class ErrorStatsServiceGrpc {
           getChannel().newCall(getListEventsMethod(), getCallOptions()), request);
     }
 
-    /**
-     *
-     *
-     * <pre>
-     * Deletes all error events of a given project.
-     * </pre>
-     */
+    /** */
     public com.google.common.util.concurrent.ListenableFuture<
             com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsResponse>
         deleteEvents(com.google.devtools.clouderrorreporting.v1beta1.DeleteEventsRequest request) {
