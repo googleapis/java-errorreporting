@@ -1,5 +1,48 @@
 # Changelog
 
+### [0.120.9](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.8...v0.120.9) (2020-12-02)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.16.0 ([#328](https://www.github.com/googleapis/java-errorreporting/issues/328)) ([7123fc6](https://www.github.com/googleapis/java-errorreporting/commit/7123fc6468e10d4ba3745bd1a178cf65c5a190dd))
+
+### [0.120.8](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.7...v0.120.8) (2020-11-17)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.94.0 ([#307](https://www.github.com/googleapis/java-errorreporting/issues/307)) ([11b2cc3](https://www.github.com/googleapis/java-errorreporting/commit/11b2cc303c21aad99aa2d337be15199c5a5c6353))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.15.0 ([#308](https://www.github.com/googleapis/java-errorreporting/issues/308)) ([5e0599f](https://www.github.com/googleapis/java-errorreporting/commit/5e0599f2a7a9e188b33fbc63d2dd4dc888321e3a))
+
+### [0.120.7](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.6...v0.120.7) (2020-11-05)
+
+
+### Documentation
+
+* debrand 'Stackdriver' in favor of 'Cloud' ([#269](https://www.github.com/googleapis/java-errorreporting/issues/269)) ([64302fa](https://www.github.com/googleapis/java-errorreporting/commit/64302fa69c6a3f1dc6000f9909eed9bd2a736abe))
+
+### [0.120.6](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.5...v0.120.6) (2020-10-31)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.14.1 ([#292](https://www.github.com/googleapis/java-errorreporting/issues/292)) ([32a4db2](https://www.github.com/googleapis/java-errorreporting/commit/32a4db2c3ebedbae2b75db181ec9bf96c3bcc03f))
+
+### [0.120.5](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.4...v0.120.5) (2020-10-21)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.13.0 ([#277](https://www.github.com/googleapis/java-errorreporting/issues/277)) ([372fca0](https://www.github.com/googleapis/java-errorreporting/commit/372fca01cbac38951689f533b8d76d2a0bdc74e9))
+
+### [0.120.4](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.3...v0.120.4) (2020-10-19)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v0.12.1 ([#270](https://www.github.com/googleapis/java-errorreporting/issues/270)) ([bd80807](https://www.github.com/googleapis/java-errorreporting/commit/bd808079b8ab8506d8e6f98ac503c7edaa3c26ba))
+
 ### [0.120.3](https://www.github.com/googleapis/java-errorreporting/compare/v0.120.2...v0.120.3) (2020-10-08)
 
 

@@ -4,22 +4,22 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-errorreporting.git",
-        "sha": "c9cb50974d8c2fce2aeec3563a7f9800a32d5a25"
+        "sha": "6d21e0d8bac69ae25daa3511ca559ccf7b95b186"
       }
     },
     {
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "fe312530ec0a99b1e7e498253573ff70f2c6c6cb",
-        "internalRef": "321573684"
+        "sha": "16e91be3603953bcfc0f87aa369e3eb7d1b2cbaf",
+        "internalRef": "345608665"
       }
     },
     {
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "7c5370937dd9ba9dcf9cd7d2af880a58b389b4f1"
+        "sha": "5d11bd2888c38ce1fb6fa6bf25494a4219a73928"
       }
     }
   ],
@@ -40,8 +40,11 @@
     ".github/ISSUE_TEMPLATE/feature_request.md",
     ".github/ISSUE_TEMPLATE/support_request.md",
     ".github/PULL_REQUEST_TEMPLATE.md",
+    ".github/blunderbuss.yml",
+    ".github/generated-files-bot.yml",
     ".github/readme/synth.py",
     ".github/release-please.yml",
+    ".github/snippet-bot.yml",
     ".github/trusted-contribution.yml",
     ".github/workflows/approve-readme.yaml",
     ".github/workflows/auto-release.yaml",
@@ -126,7 +129,6 @@
     "google-cloud-errorreporting/src/test/java/com/google/cloud/errorreporting/v1beta1/MockReportErrorsService.java",
     "google-cloud-errorreporting/src/test/java/com/google/cloud/errorreporting/v1beta1/MockReportErrorsServiceImpl.java",
     "google-cloud-errorreporting/src/test/java/com/google/cloud/errorreporting/v1beta1/ReportErrorsServiceClientTest.java",
-    "google-cloud-errorreporting/src/test/java/com/google/cloud/errorreporting/v1beta1/ReportErrorsServiceSmokeTest.java",
     "grpc-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ErrorGroupServiceGrpc.java",
     "grpc-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ErrorStatsServiceGrpc.java",
     "grpc-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ReportErrorsServiceGrpc.java",
