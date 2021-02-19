@@ -200,23 +200,28 @@ public class GrpcErrorStatsServiceStub extends ErrorStatsServiceStub {
     return operationsStub;
   }
 
+  @Override
   public UnaryCallable<ListGroupStatsRequest, ListGroupStatsResponse> listGroupStatsCallable() {
     return listGroupStatsCallable;
   }
 
+  @Override
   public UnaryCallable<ListGroupStatsRequest, ListGroupStatsPagedResponse>
       listGroupStatsPagedCallable() {
     return listGroupStatsPagedCallable;
   }
 
+  @Override
   public UnaryCallable<ListEventsRequest, ListEventsResponse> listEventsCallable() {
     return listEventsCallable;
   }
 
+  @Override
   public UnaryCallable<ListEventsRequest, ListEventsPagedResponse> listEventsPagedCallable() {
     return listEventsPagedCallable;
   }
 
+  @Override
   public UnaryCallable<DeleteEventsRequest, DeleteEventsResponse> deleteEventsCallable() {
     return deleteEventsCallable;
   }

@@ -83,6 +83,7 @@ public class ErrorGroupServiceClientTest {
             .setName(ErrorGroupName.of("[PROJECT]", "[GROUP]").toString())
             .setGroupId("groupId293428218")
             .addAllTrackingIssues(new ArrayList<TrackingIssue>())
+            .setResolutionStatus(ResolutionStatus.forNumber(0))
             .build();
     mockErrorGroupService.addResponse(expectedResponse);
 
@@ -123,6 +124,7 @@ public class ErrorGroupServiceClientTest {
             .setName(ErrorGroupName.of("[PROJECT]", "[GROUP]").toString())
             .setGroupId("groupId293428218")
             .addAllTrackingIssues(new ArrayList<TrackingIssue>())
+            .setResolutionStatus(ResolutionStatus.forNumber(0))
             .build();
     mockErrorGroupService.addResponse(expectedResponse);
 
@@ -163,6 +165,7 @@ public class ErrorGroupServiceClientTest {
             .setName(ErrorGroupName.of("[PROJECT]", "[GROUP]").toString())
             .setGroupId("groupId293428218")
             .addAllTrackingIssues(new ArrayList<TrackingIssue>())
+            .setResolutionStatus(ResolutionStatus.forNumber(0))
             .build();
     mockErrorGroupService.addResponse(expectedResponse);
 

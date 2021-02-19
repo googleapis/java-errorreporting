@@ -69,7 +69,13 @@ public class MockReportErrorsServiceImpl extends ReportErrorsServiceImplBase {
     } else if (response instanceof Exception) {
       responseObserver.onError(((Exception) response));
     } else {
-      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method ReportErrorEvent, expected %s or %s",
+                  response.getClass().getName(),
+                  ReportErrorEventResponse.class.getName(),
+                  Exception.class.getName())));
     }
   }
 }
