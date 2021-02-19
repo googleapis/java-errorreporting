@@ -137,7 +137,7 @@ public class ReportErrorsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Report an individual error event.
+   * Report an individual error event and record the event to a log.
    *
    * <p>This endpoint accepts &#42;&#42;either&#42;&#42; an OAuth token,
    *
@@ -148,11 +148,19 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * </ul>
    *
    * <p>`POST
-   * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+   * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+   *
+   * <p>&#42;&#42;Note:&#42;&#42; [Error Reporting](/error-reporting) is a global service built on
+   * Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed to other
+   * Google Cloud projects.
+   *
+   * <p>For more information, see [Using Error Reporting with regionalized
+   * logs](/error-reporting/docs/regionalization).
    *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
-   *     `projects/` plus the [Google Cloud Platform project
-   *     ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+   *     `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project
+   *     ID](https://support.google.com/cloud/answer/6158840).
+   *     <p>Example: // `projects/my-project-123`.
    * @param event Required. The error event to be reported.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -168,7 +176,7 @@ public class ReportErrorsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Report an individual error event.
+   * Report an individual error event and record the event to a log.
    *
    * <p>This endpoint accepts &#42;&#42;either&#42;&#42; an OAuth token,
    *
@@ -179,11 +187,19 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * </ul>
    *
    * <p>`POST
-   * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+   * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+   *
+   * <p>&#42;&#42;Note:&#42;&#42; [Error Reporting](/error-reporting) is a global service built on
+   * Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed to other
+   * Google Cloud projects.
+   *
+   * <p>For more information, see [Using Error Reporting with regionalized
+   * logs](/error-reporting/docs/regionalization).
    *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
-   *     `projects/` plus the [Google Cloud Platform project
-   *     ID](https://support.google.com/cloud/answer/6158840). Example: `projects/my-project-123`.
+   *     `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project
+   *     ID](https://support.google.com/cloud/answer/6158840).
+   *     <p>Example: // `projects/my-project-123`.
    * @param event Required. The error event to be reported.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -196,7 +212,7 @@ public class ReportErrorsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Report an individual error event.
+   * Report an individual error event and record the event to a log.
    *
    * <p>This endpoint accepts &#42;&#42;either&#42;&#42; an OAuth token,
    *
@@ -207,7 +223,14 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * </ul>
    *
    * <p>`POST
-   * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+   * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+   *
+   * <p>&#42;&#42;Note:&#42;&#42; [Error Reporting](/error-reporting) is a global service built on
+   * Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed to other
+   * Google Cloud projects.
+   *
+   * <p>For more information, see [Using Error Reporting with regionalized
+   * logs](/error-reporting/docs/regionalization).
    *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
@@ -218,7 +241,7 @@ public class ReportErrorsServiceClient implements BackgroundResource {
 
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
-   * Report an individual error event.
+   * Report an individual error event and record the event to a log.
    *
    * <p>This endpoint accepts &#42;&#42;either&#42;&#42; an OAuth token,
    *
@@ -229,7 +252,14 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * </ul>
    *
    * <p>`POST
-   * https://clouderrorreporting.googleapis.com/v1beta1/projects/example-project/events:report?key=123ABC456`
+   * https://clouderrorreporting.googleapis.com/v1beta1/{projectName}/events:report?key=123ABC456`
+   *
+   * <p>&#42;&#42;Note:&#42;&#42; [Error Reporting](/error-reporting) is a global service built on
+   * Cloud Logging and doesn't analyze logs stored in regional log buckets or logs routed to other
+   * Google Cloud projects.
+   *
+   * <p>For more information, see [Using Error Reporting with regionalized
+   * logs](/error-reporting/docs/regionalization).
    *
    * <p>Sample code:
    */
