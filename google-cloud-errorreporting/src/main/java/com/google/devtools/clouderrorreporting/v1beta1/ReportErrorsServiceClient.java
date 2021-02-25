@@ -32,6 +32,15 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
+ * <pre>{@code
+ * try (ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.create()) {
+ *   ProjectName projectName = ProjectName.of("[PROJECT]");
+ *   ReportedErrorEvent event = ReportedErrorEvent.newBuilder().build();
+ *   ReportErrorEventResponse response =
+ *       reportErrorsServiceClient.reportErrorEvent(projectName, event);
+ * }
+ * }</pre>
+ *
  * <p>Note: close() needs to be called on the ReportErrorsServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
@@ -157,6 +166,17 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * <p>For more information, see [Using Error Reporting with regionalized
    * logs](/error-reporting/docs/regionalization).
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.create()) {
+   *   ProjectName projectName = ProjectName.of("[PROJECT]");
+   *   ReportedErrorEvent event = ReportedErrorEvent.newBuilder().build();
+   *   ReportErrorEventResponse response =
+   *       reportErrorsServiceClient.reportErrorEvent(projectName, event);
+   * }
+   * }</pre>
+   *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project
    *     ID](https://support.google.com/cloud/answer/6158840).
@@ -196,6 +216,17 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * <p>For more information, see [Using Error Reporting with regionalized
    * logs](/error-reporting/docs/regionalization).
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.create()) {
+   *   String projectName = ProjectName.of("[PROJECT]").toString();
+   *   ReportedErrorEvent event = ReportedErrorEvent.newBuilder().build();
+   *   ReportErrorEventResponse response =
+   *       reportErrorsServiceClient.reportErrorEvent(projectName, event);
+   * }
+   * }</pre>
+   *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectId}`, where `{projectId}` is the [Google Cloud Platform project
    *     ID](https://support.google.com/cloud/answer/6158840).
@@ -232,6 +263,19 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * <p>For more information, see [Using Error Reporting with regionalized
    * logs](/error-reporting/docs/regionalization).
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.create()) {
+   *   ReportErrorEventRequest request =
+   *       ReportErrorEventRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .setEvent(ReportedErrorEvent.newBuilder().build())
+   *           .build();
+   *   ReportErrorEventResponse response = reportErrorsServiceClient.reportErrorEvent(request);
+   * }
+   * }</pre>
+   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -262,6 +306,20 @@ public class ReportErrorsServiceClient implements BackgroundResource {
    * logs](/error-reporting/docs/regionalization).
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ReportErrorsServiceClient reportErrorsServiceClient = ReportErrorsServiceClient.create()) {
+   *   ReportErrorEventRequest request =
+   *       ReportErrorEventRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .setEvent(ReportedErrorEvent.newBuilder().build())
+   *           .build();
+   *   ApiFuture<ReportErrorEventResponse> future =
+   *       reportErrorsServiceClient.reportErrorEventCallable().futureCall(request);
+   *   // Do something.
+   *   ReportErrorEventResponse response = future.get();
+   * }
+   * }</pre>
    */
   public final UnaryCallable<ReportErrorEventRequest, ReportErrorEventResponse>
       reportErrorEventCallable() {
