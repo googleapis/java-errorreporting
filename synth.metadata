@@ -11,8 +11,8 @@
       "git": {
         "name": "googleapis",
         "remote": "https://github.com/googleapis/googleapis.git",
-        "sha": "408590478542a058f2f1a706a402beb44844f66b",
-        "internalRef": "355832930"
+        "sha": "c1e59709c1d28795fe9b70eb479579556056bfad",
+        "internalRef": "356330876"
       }
     },
     {
@@ -173,6 +173,7 @@
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ReportErrorsServiceProto.java",
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ReportedErrorEvent.java",
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ReportedErrorEventOrBuilder.java",
+    "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ResolutionStatus.java",
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ServiceContext.java",
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ServiceContextFilter.java",
     "proto-google-cloud-error-reporting-v1beta1/src/main/java/com/google/devtools/clouderrorreporting/v1beta1/ServiceContextFilterOrBuilder.java",
