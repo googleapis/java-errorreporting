@@ -249,7 +249,9 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
    *           .setTimeRange(QueryTimeRange.newBuilder().build())
    *           .setTimedCountDuration(Duration.newBuilder().build())
+   *           .setAlignment(TimedCountAlignment.forNumber(0))
    *           .setAlignmentTime(Timestamp.newBuilder().build())
+   *           .setOrder(ErrorGroupOrder.forNumber(0))
    *           .setPageSize(883849137)
    *           .setPageToken("pageToken873572522")
    *           .build();
@@ -281,7 +283,9 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
    *           .setTimeRange(QueryTimeRange.newBuilder().build())
    *           .setTimedCountDuration(Duration.newBuilder().build())
+   *           .setAlignment(TimedCountAlignment.forNumber(0))
    *           .setAlignmentTime(Timestamp.newBuilder().build())
+   *           .setOrder(ErrorGroupOrder.forNumber(0))
    *           .setPageSize(883849137)
    *           .setPageToken("pageToken873572522")
    *           .build();
