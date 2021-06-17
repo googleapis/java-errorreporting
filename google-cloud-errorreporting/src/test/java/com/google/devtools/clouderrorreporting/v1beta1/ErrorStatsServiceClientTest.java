@@ -43,8 +43,8 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ErrorStatsServiceClientTest {
-  private static MockServiceHelper mockServiceHelper;
   private static MockErrorStatsService mockErrorStatsService;
+  private static MockServiceHelper mockServiceHelper;
   private ErrorStatsServiceClient client;
   private LocalChannelProvider channelProvider;
 

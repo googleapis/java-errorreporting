@@ -40,10 +40,10 @@ import org.junit.Test;
 
 @Generated("by gapic-generator-java")
 public class ErrorGroupServiceClientTest {
+  private static MockErrorGroupService mockErrorGroupService;
   private static MockServiceHelper mockServiceHelper;
   private ErrorGroupServiceClient client;
   private LocalChannelProvider channelProvider;
-  private static MockErrorGroupService mockErrorGroupService;
 
   @BeforeClass
   public static void startStaticServer() {
