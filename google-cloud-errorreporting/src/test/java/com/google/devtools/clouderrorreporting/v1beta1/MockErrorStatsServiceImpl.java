@@ -69,7 +69,13 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
     } else if (response instanceof Exception) {
       responseObserver.onError(((Exception) response));
     } else {
-      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method ListGroupStats, expected %s or %s",
+                  response.getClass().getName(),
+                  ListGroupStatsResponse.class.getName(),
+                  Exception.class.getName())));
     }
   }
 
@@ -84,7 +90,13 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
     } else if (response instanceof Exception) {
       responseObserver.onError(((Exception) response));
     } else {
-      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method ListEvents, expected %s or %s",
+                  response.getClass().getName(),
+                  ListEventsResponse.class.getName(),
+                  Exception.class.getName())));
     }
   }
 
@@ -99,7 +111,13 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
     } else if (response instanceof Exception) {
       responseObserver.onError(((Exception) response));
     } else {
-      responseObserver.onError(new IllegalArgumentException("Unrecognized response type"));
+      responseObserver.onError(
+          new IllegalArgumentException(
+              String.format(
+                  "Unrecognized response type %s for method DeleteEvents, expected %s or %s",
+                  response.getClass().getName(),
+                  DeleteEventsResponse.class.getName(),
+                  Exception.class.getName())));
     }
   }
 }
