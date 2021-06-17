@@ -60,7 +60,7 @@ public class MockErrorGroupServiceImpl extends ErrorGroupServiceImplBase {
 
   @Override
   public void getGroup(GetGroupRequest request, StreamObserver<ErrorGroup> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof ErrorGroup) {
       requests.add(request);
       responseObserver.onNext(((ErrorGroup) response));
@@ -72,7 +72,7 @@ public class MockErrorGroupServiceImpl extends ErrorGroupServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method GetGroup, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   ErrorGroup.class.getName(),
                   Exception.class.getName())));
     }
@@ -80,7 +80,7 @@ public class MockErrorGroupServiceImpl extends ErrorGroupServiceImplBase {
 
   @Override
   public void updateGroup(UpdateGroupRequest request, StreamObserver<ErrorGroup> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof ErrorGroup) {
       requests.add(request);
       responseObserver.onNext(((ErrorGroup) response));
@@ -92,7 +92,7 @@ public class MockErrorGroupServiceImpl extends ErrorGroupServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method UpdateGroup, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   ErrorGroup.class.getName(),
                   Exception.class.getName())));
     }

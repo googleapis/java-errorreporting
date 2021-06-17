@@ -61,7 +61,7 @@ public class MockReportErrorsServiceImpl extends ReportErrorsServiceImplBase {
   @Override
   public void reportErrorEvent(
       ReportErrorEventRequest request, StreamObserver<ReportErrorEventResponse> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof ReportErrorEventResponse) {
       requests.add(request);
       responseObserver.onNext(((ReportErrorEventResponse) response));
@@ -73,7 +73,7 @@ public class MockReportErrorsServiceImpl extends ReportErrorsServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method ReportErrorEvent, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   ReportErrorEventResponse.class.getName(),
                   Exception.class.getName())));
     }
