@@ -153,10 +153,12 @@ public class GrpcErrorGroupServiceStub extends ErrorGroupServiceStub {
     return operationsStub;
   }
 
+  @Override
   public UnaryCallable<GetGroupRequest, ErrorGroup> getGroupCallable() {
     return getGroupCallable;
   }
 
+  @Override
   public UnaryCallable<UpdateGroupRequest, ErrorGroup> updateGroupCallable() {
     return updateGroupCallable;
   }

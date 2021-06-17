@@ -130,6 +130,7 @@ public class GrpcReportErrorsServiceStub extends ReportErrorsServiceStub {
     return operationsStub;
   }
 
+  @Override
   public UnaryCallable<ReportErrorEventRequest, ReportErrorEventResponse>
       reportErrorEventCallable() {
     return reportErrorEventCallable;
