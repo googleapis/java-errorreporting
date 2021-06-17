@@ -16,11 +16,6 @@
 package com.google.devtools.clouderrorreporting.v1beta1;
 
 import static io.grpc.MethodDescriptor.generateFullMethodName;
-import static io.grpc.stub.ClientCalls.asyncUnaryCall;
-import static io.grpc.stub.ClientCalls.blockingUnaryCall;
-import static io.grpc.stub.ClientCalls.futureUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnaryCall;
-import static io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall;
 
 /**
  *
@@ -162,7 +157,8 @@ public final class ReportErrorsServiceGrpc {
         io.grpc.stub.StreamObserver<
                 com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse>
             responseObserver) {
-      asyncUnimplementedUnaryCall(getReportErrorEventMethod(), responseObserver);
+      io.grpc.stub.ServerCalls.asyncUnimplementedUnaryCall(
+          getReportErrorEventMethod(), responseObserver);
     }
 
     @java.lang.Override
@@ -170,7 +166,7 @@ public final class ReportErrorsServiceGrpc {
       return io.grpc.ServerServiceDefinition.builder(getServiceDescriptor())
           .addMethod(
               getReportErrorEventMethod(),
-              asyncUnaryCall(
+              io.grpc.stub.ServerCalls.asyncUnaryCall(
                   new MethodHandlers<
                       com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest,
                       com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse>(
@@ -222,7 +218,7 @@ public final class ReportErrorsServiceGrpc {
         io.grpc.stub.StreamObserver<
                 com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse>
             responseObserver) {
-      asyncUnaryCall(
+      io.grpc.stub.ClientCalls.asyncUnaryCall(
           getChannel().newCall(getReportErrorEventMethod(), getCallOptions()),
           request,
           responseObserver);
@@ -271,7 +267,7 @@ public final class ReportErrorsServiceGrpc {
     public com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse
         reportErrorEvent(
             com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest request) {
-      return blockingUnaryCall(
+      return io.grpc.stub.ClientCalls.blockingUnaryCall(
           getChannel(), getReportErrorEventMethod(), getCallOptions(), request);
     }
   }
@@ -319,7 +315,7 @@ public final class ReportErrorsServiceGrpc {
             com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse>
         reportErrorEvent(
             com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventRequest request) {
-      return futureUnaryCall(
+      return io.grpc.stub.ClientCalls.futureUnaryCall(
           getChannel().newCall(getReportErrorEventMethod(), getCallOptions()), request);
     }
   }
