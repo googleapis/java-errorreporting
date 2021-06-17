@@ -180,8 +180,8 @@ public class ErrorGroupName implements ResourceName {
     }
 
     private Builder(ErrorGroupName errorGroupName) {
-      project = errorGroupName.project;
-      group = errorGroupName.group;
+      this.project = errorGroupName.project;
+      this.group = errorGroupName.group;
     }
 
     public ErrorGroupName build() {
