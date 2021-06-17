@@ -311,6 +311,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    *
    * <pre>{@code
    * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListGroupStatsRequest request =
+   *       ListGroupStatsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .addAllGroupId(new ArrayList<String>())
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setTimedCountDuration(Duration.newBuilder().build())
+   *           .setAlignment(TimedCountAlignment.forNumber(0))
+   *           .setAlignmentTime(Timestamp.newBuilder().build())
+   *           .setOrder(ErrorGroupOrder.forNumber(0))
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
    *   while (true) {
    *     ListGroupStatsResponse response =
    *         errorStatsServiceClient.listGroupStatsCallable().call(request);
@@ -463,6 +476,15 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    *
    * <pre>{@code
    * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListEventsRequest request =
+   *       ListEventsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .setGroupId("groupId293428218")
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
    *   while (true) {
    *     ListEventsResponse response = errorStatsServiceClient.listEventsCallable().call(request);
    *     for (ErrorEvent element : response.getResponsesList()) {
