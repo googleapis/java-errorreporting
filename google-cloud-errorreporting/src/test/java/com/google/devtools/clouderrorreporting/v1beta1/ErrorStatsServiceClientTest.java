@@ -45,8 +45,8 @@ import org.junit.Test;
 public class ErrorStatsServiceClientTest {
   private static MockErrorStatsService mockErrorStatsService;
   private static MockServiceHelper mockServiceHelper;
-  private ErrorStatsServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ErrorStatsServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {

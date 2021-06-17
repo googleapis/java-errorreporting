@@ -42,8 +42,8 @@ import org.junit.Test;
 public class ErrorGroupServiceClientTest {
   private static MockErrorGroupService mockErrorGroupService;
   private static MockServiceHelper mockServiceHelper;
-  private ErrorGroupServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ErrorGroupServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
