@@ -14,7 +14,7 @@
   <parent>
     <groupId>com.google.cloud.samples</groupId>
     <artifactId>shared-configuration</artifactId>
-    <version>1.0.22</version>
+    <version>1.0.23</version>
   </parent>
 
   <properties>
@@ -28,14 +28,14 @@
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-errorreporting</artifactId>
-      <version>0.121.1-beta-SNAPSHOT</version>
+      <version>0.121.3-beta-SNAPSHOT</version>
     </dependency>
     <!-- {x-version-update-end} -->
 
     <dependency>
       <groupId>com.google.cloud</groupId>
       <artifactId>google-cloud-core</artifactId>
-      <version>1.94.8</version>
+      <version>1.95.2</version>
     </dependency>
     <dependency>
       <groupId>junit</groupId>
