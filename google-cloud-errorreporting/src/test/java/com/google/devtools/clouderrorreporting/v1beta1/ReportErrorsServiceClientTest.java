@@ -41,8 +41,8 @@ import org.junit.Test;
 public class ReportErrorsServiceClientTest {
   private static MockReportErrorsService mockReportErrorsService;
   private static MockServiceHelper mockServiceHelper;
-  private ReportErrorsServiceClient client;
   private LocalChannelProvider channelProvider;
+  private ReportErrorsServiceClient client;
 
   @BeforeClass
   public static void startStaticServer() {
