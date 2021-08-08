@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.google.cloud.errorreporting.v1beta1.it;
+package com.google.devtools.clouderrorreporting.v1beta1;
 
 import static org.junit.Assert.assertEquals;
 import static org.junit.Assert.assertNotNull;
@@ -21,18 +21,7 @@ import static org.junit.Assert.assertTrue;
 
 import com.google.api.gax.rpc.InvalidArgumentException;
 import com.google.cloud.ServiceOptions;
-import com.google.cloud.errorreporting.v1beta1.ErrorGroupServiceClient;
-import com.google.cloud.errorreporting.v1beta1.ErrorStatsServiceClient;
-import com.google.cloud.errorreporting.v1beta1.ReportErrorsServiceClient;
 import com.google.common.collect.Lists;
-import com.google.devtools.clouderrorreporting.v1beta1.ErrorEvent;
-import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup;
-import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroupName;
-import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroupStats;
-import com.google.devtools.clouderrorreporting.v1beta1.ProjectName;
-import com.google.devtools.clouderrorreporting.v1beta1.QueryTimeRange;
-import com.google.devtools.clouderrorreporting.v1beta1.ReportErrorEventResponse;
-import com.google.devtools.clouderrorreporting.v1beta1.ReportedErrorEvent;
 import java.util.List;
 import org.junit.AfterClass;
 import org.junit.BeforeClass;
