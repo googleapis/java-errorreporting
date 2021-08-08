@@ -1,5 +1,33 @@
 # Changelog
 
+### [0.121.5](https://www.github.com/googleapis/java-errorreporting/compare/v0.121.4...v0.121.5) (2021-08-02)
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.96.0 ([#603](https://www.github.com/googleapis/java-errorreporting/issues/603)) ([cf5a107](https://www.github.com/googleapis/java-errorreporting/commit/cf5a107afbd7e4d808f7577548c146262c4b2e84))
+
+### [0.121.4](https://www.github.com/googleapis/java-errorreporting/compare/v0.121.3...v0.121.4) (2021-07-05)
+
+
+### Bug Fixes
+
+* Add `shopt -s nullglob` to dependencies script ([#576](https://www.github.com/googleapis/java-errorreporting/issues/576)) ([0f706a9](https://www.github.com/googleapis/java-errorreporting/commit/0f706a9f6f07747186dc35d2a995654f99a00c47))
+
+
+### Dependencies
+
+* update dependency com.google.cloud:google-cloud-core to v1.95.3 ([#577](https://www.github.com/googleapis/java-errorreporting/issues/577)) ([f253b71](https://www.github.com/googleapis/java-errorreporting/commit/f253b71144cda1c354c873458c3fb84d0510b768))
+* update dependency com.google.cloud:google-cloud-core to v1.95.4 ([#581](https://www.github.com/googleapis/java-errorreporting/issues/581)) ([1232c98](https://www.github.com/googleapis/java-errorreporting/commit/1232c9809addffba6548430aa67c16b466fc7197))
+* update dependency com.google.cloud:google-cloud-shared-dependencies to v1.4.0 ([#582](https://www.github.com/googleapis/java-errorreporting/issues/582)) ([fe170db](https://www.github.com/googleapis/java-errorreporting/commit/fe170db3ae9e0f5facf36618de4baf057be4eba2))
+
+### [0.121.3](https://www.github.com/googleapis/java-errorreporting/compare/v0.121.2...v0.121.3) (2021-06-17)
+
+
+### Bug Fixes
+
+* Update dependencies.sh to not break on mac ([#565](https://www.github.com/googleapis/java-errorreporting/issues/565)) ([5bf8a95](https://www.github.com/googleapis/java-errorreporting/commit/5bf8a958f242eb470ead4f6312d08d57863f753f))
+
 ### [0.121.2](https://www.github.com/googleapis/java-errorreporting/compare/v0.121.1...v0.121.2) (2021-06-15)
 
 
