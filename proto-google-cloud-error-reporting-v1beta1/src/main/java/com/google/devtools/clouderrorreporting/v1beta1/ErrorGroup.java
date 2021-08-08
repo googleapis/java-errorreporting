@@ -41,7 +41,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
     name_ = "";
     groupId_ = "";
     trackingIssues_ = java.util.Collections.emptyList();
-    resolutionStatus_ = 0;
   }
 
   @java.lang.Override
@@ -106,7 +105,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
             {
               int rawValue = input.readEnum();
 
-              resolutionStatus_ = rawValue;
               break;
             }
           default:
@@ -327,49 +325,7 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
     return trackingIssues_.get(index);
   }
 
-  public static final int RESOLUTION_STATUS_FIELD_NUMBER = 5;
-  private int resolutionStatus_;
-  /**
-   *
-   *
-   * <pre>
-   * Error group's resolution status.
-   * An unspecified resolution status will be interpreted as OPEN
-   * </pre>
-   *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
-   * </code>
-   *
-   * @return The enum numeric value on the wire for resolutionStatus.
-   */
-  @java.lang.Override
-  public int getResolutionStatusValue() {
-    return resolutionStatus_;
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Error group's resolution status.
-   * An unspecified resolution status will be interpreted as OPEN
-   * </pre>
-   *
-   * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
-   * </code>
-   *
-   * @return The resolutionStatus.
-   */
-  @java.lang.Override
-  public com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus getResolutionStatus() {
-    @SuppressWarnings("deprecation")
-    com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus result =
-        com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus.valueOf(resolutionStatus_);
-    return result == null
-        ? com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus.UNRECOGNIZED
-        : result;
-  }
-
-  private byte memoizedIsInitialized = -1;
+    private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
   public final boolean isInitialized() {
@@ -392,12 +348,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
     for (int i = 0; i < trackingIssues_.size(); i++) {
       output.writeMessage(3, trackingIssues_.get(i));
     }
-    if (resolutionStatus_
-        != com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus
-            .RESOLUTION_STATUS_UNSPECIFIED
-            .getNumber()) {
-      output.writeEnum(5, resolutionStatus_);
-    }
     unknownFields.writeTo(output);
   }
 
@@ -415,12 +365,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
     }
     for (int i = 0; i < trackingIssues_.size(); i++) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, trackingIssues_.get(i));
-    }
-    if (resolutionStatus_
-        != com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus
-            .RESOLUTION_STATUS_UNSPECIFIED
-            .getNumber()) {
-      size += com.google.protobuf.CodedOutputStream.computeEnumSize(5, resolutionStatus_);
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -441,7 +385,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
     if (!getName().equals(other.getName())) return false;
     if (!getGroupId().equals(other.getGroupId())) return false;
     if (!getTrackingIssuesList().equals(other.getTrackingIssuesList())) return false;
-    if (resolutionStatus_ != other.resolutionStatus_) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -461,8 +404,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
       hash = (37 * hash) + TRACKING_ISSUES_FIELD_NUMBER;
       hash = (53 * hash) + getTrackingIssuesList().hashCode();
     }
-    hash = (37 * hash) + RESOLUTION_STATUS_FIELD_NUMBER;
-    hash = (53 * hash) + resolutionStatus_;
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
     return hash;
@@ -621,7 +562,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
       } else {
         trackingIssuesBuilder_.clear();
       }
-      resolutionStatus_ = 0;
 
       return this;
     }
@@ -662,7 +602,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
       } else {
         result.trackingIssues_ = trackingIssuesBuilder_.build();
       }
-      result.resolutionStatus_ = resolutionStatus_;
       onBuilt();
       return result;
     }
@@ -747,9 +686,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
             trackingIssuesBuilder_.addAllMessages(other.trackingIssues_);
           }
         }
-      }
-      if (other.resolutionStatus_ != 0) {
-        setResolutionStatusValue(other.getResolutionStatusValue());
       }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
@@ -1412,67 +1348,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
       return trackingIssuesBuilder_;
     }
 
-    private int resolutionStatus_ = 0;
-    /**
-     *
-     *
-     * <pre>
-     * Error group's resolution status.
-     * An unspecified resolution status will be interpreted as OPEN
-     * </pre>
-     *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
-     * </code>
-     *
-     * @return The enum numeric value on the wire for resolutionStatus.
-     */
-    @java.lang.Override
-    public int getResolutionStatusValue() {
-      return resolutionStatus_;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Error group's resolution status.
-     * An unspecified resolution status will be interpreted as OPEN
-     * </pre>
-     *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
-     * </code>
-     *
-     * @param value The enum numeric value on the wire for resolutionStatus to set.
-     * @return This builder for chaining.
-     */
-    public Builder setResolutionStatusValue(int value) {
-
-      resolutionStatus_ = value;
-      onChanged();
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Error group's resolution status.
-     * An unspecified resolution status will be interpreted as OPEN
-     * </pre>
-     *
-     * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
-     * </code>
-     *
-     * @return The resolutionStatus.
-     */
-    @java.lang.Override
-    public com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus getResolutionStatus() {
-      @SuppressWarnings("deprecation")
-      com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus result =
-          com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus.valueOf(
-              resolutionStatus_);
-      return result == null
-          ? com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus.UNRECOGNIZED
-          : result;
-    }
     /**
      *
      *
@@ -1493,7 +1368,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
         throw new NullPointerException();
       }
 
-      resolutionStatus_ = value.getNumber();
       onChanged();
       return this;
     }
@@ -1512,7 +1386,6 @@ public final class ErrorGroup extends com.google.protobuf.GeneratedMessageV3
      */
     public Builder clearResolutionStatus() {
 
-      resolutionStatus_ = 0;
       onChanged();
       return this;
     }

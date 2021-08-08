@@ -46,10 +46,6 @@ message ErrorGroup {
 
   // Associated tracking issues.
   repeated TrackingIssue tracking_issues = 3;
-
-  // Error group's resolution status.
-  // An unspecified resolution status will be interpreted as OPEN
-  ResolutionStatus resolution_status = 5;
 }
 
 // Information related to tracking the progress on resolving the error.
