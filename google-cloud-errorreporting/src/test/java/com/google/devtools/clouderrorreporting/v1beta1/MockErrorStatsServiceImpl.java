@@ -61,7 +61,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
   @Override
   public void listGroupStats(
       ListGroupStatsRequest request, StreamObserver<ListGroupStatsResponse> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof ListGroupStatsResponse) {
       requests.add(request);
       responseObserver.onNext(((ListGroupStatsResponse) response));
@@ -73,7 +73,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method ListGroupStats, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   ListGroupStatsResponse.class.getName(),
                   Exception.class.getName())));
     }
@@ -82,7 +82,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
   @Override
   public void listEvents(
       ListEventsRequest request, StreamObserver<ListEventsResponse> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof ListEventsResponse) {
       requests.add(request);
       responseObserver.onNext(((ListEventsResponse) response));
@@ -94,7 +94,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method ListEvents, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   ListEventsResponse.class.getName(),
                   Exception.class.getName())));
     }
@@ -103,7 +103,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
   @Override
   public void deleteEvents(
       DeleteEventsRequest request, StreamObserver<DeleteEventsResponse> responseObserver) {
-    Object response = responses.remove();
+    Object response = responses.poll();
     if (response instanceof DeleteEventsResponse) {
       requests.add(request);
       responseObserver.onNext(((DeleteEventsResponse) response));
@@ -115,7 +115,7 @@ public class MockErrorStatsServiceImpl extends ErrorStatsServiceImplBase {
           new IllegalArgumentException(
               String.format(
                   "Unrecognized response type %s for method DeleteEvents, expected %s or %s",
-                  response.getClass().getName(),
+                  response == null ? "null" : response.getClass().getName(),
                   DeleteEventsResponse.class.getName(),
                   Exception.class.getName())));
     }
