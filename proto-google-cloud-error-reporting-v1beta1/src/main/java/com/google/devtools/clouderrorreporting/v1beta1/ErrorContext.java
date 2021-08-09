@@ -42,7 +42,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
 
   private ErrorContext() {
     user_ = "";
-    sourceReferences_ = java.util.Collections.emptyList();
   }
 
   @java.lang.Override
@@ -64,7 +63,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     if (extensionRegistry == null) {
       throw new java.lang.NullPointerException();
     }
-    int mutable_bitField0_ = 0;
     com.google.protobuf.UnknownFieldSet.Builder unknownFields =
         com.google.protobuf.UnknownFieldSet.newBuilder();
     try {
@@ -118,18 +116,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
 
               break;
             }
-          case 34:
-            {
-              if (!((mutable_bitField0_ & 0x00000001) != 0)) {
-                sourceReferences_ =
-                    new java.util.ArrayList<com.google.appengine.logging.v1.SourceReference>();
-                mutable_bitField0_ |= 0x00000001;
-              }
-              sourceReferences_.add(
-                  input.readMessage(
-                      com.google.appengine.logging.v1.SourceReference.parser(), extensionRegistry));
-              break;
-            }
           default:
             {
               if (!parseUnknownField(input, unknownFields, extensionRegistry, tag)) {
@@ -144,9 +130,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     } catch (java.io.IOException e) {
       throw new com.google.protobuf.InvalidProtocolBufferException(e).setUnfinishedMessage(this);
     } finally {
-      if (((mutable_bitField0_ & 0x00000001) != 0)) {
-        sourceReferences_ = java.util.Collections.unmodifiableList(sourceReferences_);
-      }
       this.unknownFields = unknownFields.build();
       makeExtensionsImmutable();
     }
@@ -343,81 +326,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     return getReportLocation();
   }
 
-  public static final int SOURCE_REFERENCES_FIELD_NUMBER = 4;
-  private java.util.List<com.google.appengine.logging.v1.SourceReference> sourceReferences_;
-  /**
-   *
-   *
-   * <pre>
-   * Source code that was used to build the executable which has
-   * caused the given error message.
-   * </pre>
-   *
-   * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-   */
-  @java.lang.Override
-  public java.util.List<com.google.appengine.logging.v1.SourceReference> getSourceReferencesList() {
-    return sourceReferences_;
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Source code that was used to build the executable which has
-   * caused the given error message.
-   * </pre>
-   *
-   * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-   */
-  @java.lang.Override
-  public java.util.List<? extends com.google.appengine.logging.v1.SourceReferenceOrBuilder>
-      getSourceReferencesOrBuilderList() {
-    return sourceReferences_;
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Source code that was used to build the executable which has
-   * caused the given error message.
-   * </pre>
-   *
-   * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-   */
-  @java.lang.Override
-  public int getSourceReferencesCount() {
-    return sourceReferences_.size();
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Source code that was used to build the executable which has
-   * caused the given error message.
-   * </pre>
-   *
-   * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-   */
-  @java.lang.Override
-  public com.google.appengine.logging.v1.SourceReference getSourceReferences(int index) {
-    return sourceReferences_.get(index);
-  }
-  /**
-   *
-   *
-   * <pre>
-   * Source code that was used to build the executable which has
-   * caused the given error message.
-   * </pre>
-   *
-   * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-   */
-  @java.lang.Override
-  public com.google.appengine.logging.v1.SourceReferenceOrBuilder getSourceReferencesOrBuilder(
-      int index) {
-    return sourceReferences_.get(index);
-  }
-
   private byte memoizedIsInitialized = -1;
 
   @java.lang.Override
@@ -441,9 +349,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     if (reportLocation_ != null) {
       output.writeMessage(3, getReportLocation());
     }
-    for (int i = 0; i < sourceReferences_.size(); i++) {
-      output.writeMessage(4, sourceReferences_.get(i));
-    }
     unknownFields.writeTo(output);
   }
 
@@ -461,9 +366,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     }
     if (reportLocation_ != null) {
       size += com.google.protobuf.CodedOutputStream.computeMessageSize(3, getReportLocation());
-    }
-    for (int i = 0; i < sourceReferences_.size(); i++) {
-      size += com.google.protobuf.CodedOutputStream.computeMessageSize(4, sourceReferences_.get(i));
     }
     size += unknownFields.getSerializedSize();
     memoizedSize = size;
@@ -490,7 +392,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     if (hasReportLocation()) {
       if (!getReportLocation().equals(other.getReportLocation())) return false;
     }
-    if (!getSourceReferencesList().equals(other.getSourceReferencesList())) return false;
     if (!unknownFields.equals(other.unknownFields)) return false;
     return true;
   }
@@ -511,10 +412,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     if (hasReportLocation()) {
       hash = (37 * hash) + REPORT_LOCATION_FIELD_NUMBER;
       hash = (53 * hash) + getReportLocation().hashCode();
-    }
-    if (getSourceReferencesCount() > 0) {
-      hash = (37 * hash) + SOURCE_REFERENCES_FIELD_NUMBER;
-      hash = (53 * hash) + getSourceReferencesList().hashCode();
     }
     hash = (29 * hash) + unknownFields.hashCode();
     memoizedHashCode = hash;
@@ -659,9 +556,7 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     }
 
     private void maybeForceBuilderInitialization() {
-      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {
-        getSourceReferencesFieldBuilder();
-      }
+      if (com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders) {}
     }
 
     @java.lang.Override
@@ -680,12 +575,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
       } else {
         reportLocation_ = null;
         reportLocationBuilder_ = null;
-      }
-      if (sourceReferencesBuilder_ == null) {
-        sourceReferences_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-      } else {
-        sourceReferencesBuilder_.clear();
       }
       return this;
     }
@@ -715,7 +604,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
     public com.google.devtools.clouderrorreporting.v1beta1.ErrorContext buildPartial() {
       com.google.devtools.clouderrorreporting.v1beta1.ErrorContext result =
           new com.google.devtools.clouderrorreporting.v1beta1.ErrorContext(this);
-      int from_bitField0_ = bitField0_;
       if (httpRequestBuilder_ == null) {
         result.httpRequest_ = httpRequest_;
       } else {
@@ -726,15 +614,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
         result.reportLocation_ = reportLocation_;
       } else {
         result.reportLocation_ = reportLocationBuilder_.build();
-      }
-      if (sourceReferencesBuilder_ == null) {
-        if (((bitField0_ & 0x00000001) != 0)) {
-          sourceReferences_ = java.util.Collections.unmodifiableList(sourceReferences_);
-          bitField0_ = (bitField0_ & ~0x00000001);
-        }
-        result.sourceReferences_ = sourceReferences_;
-      } else {
-        result.sourceReferences_ = sourceReferencesBuilder_.build();
       }
       onBuilt();
       return result;
@@ -797,33 +676,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
       if (other.hasReportLocation()) {
         mergeReportLocation(other.getReportLocation());
       }
-      if (sourceReferencesBuilder_ == null) {
-        if (!other.sourceReferences_.isEmpty()) {
-          if (sourceReferences_.isEmpty()) {
-            sourceReferences_ = other.sourceReferences_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-          } else {
-            ensureSourceReferencesIsMutable();
-            sourceReferences_.addAll(other.sourceReferences_);
-          }
-          onChanged();
-        }
-      } else {
-        if (!other.sourceReferences_.isEmpty()) {
-          if (sourceReferencesBuilder_.isEmpty()) {
-            sourceReferencesBuilder_.dispose();
-            sourceReferencesBuilder_ = null;
-            sourceReferences_ = other.sourceReferences_;
-            bitField0_ = (bitField0_ & ~0x00000001);
-            sourceReferencesBuilder_ =
-                com.google.protobuf.GeneratedMessageV3.alwaysUseFieldBuilders
-                    ? getSourceReferencesFieldBuilder()
-                    : null;
-          } else {
-            sourceReferencesBuilder_.addAllMessages(other.sourceReferences_);
-          }
-        }
-      }
       this.mergeUnknownFields(other.unknownFields);
       onChanged();
       return this;
@@ -853,8 +705,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
       }
       return this;
     }
-
-    private int bitField0_;
 
     private com.google.devtools.clouderrorreporting.v1beta1.HttpRequestContext httpRequest_;
     private com.google.protobuf.SingleFieldBuilderV3<
@@ -1434,385 +1284,6 @@ public final class ErrorContext extends com.google.protobuf.GeneratedMessageV3
         reportLocation_ = null;
       }
       return reportLocationBuilder_;
-    }
-
-    private java.util.List<com.google.appengine.logging.v1.SourceReference> sourceReferences_ =
-        java.util.Collections.emptyList();
-
-    private void ensureSourceReferencesIsMutable() {
-      if (!((bitField0_ & 0x00000001) != 0)) {
-        sourceReferences_ =
-            new java.util.ArrayList<com.google.appengine.logging.v1.SourceReference>(
-                sourceReferences_);
-        bitField0_ |= 0x00000001;
-      }
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.appengine.logging.v1.SourceReference,
-            com.google.appengine.logging.v1.SourceReference.Builder,
-            com.google.appengine.logging.v1.SourceReferenceOrBuilder>
-        sourceReferencesBuilder_;
-
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public java.util.List<com.google.appengine.logging.v1.SourceReference>
-        getSourceReferencesList() {
-      if (sourceReferencesBuilder_ == null) {
-        return java.util.Collections.unmodifiableList(sourceReferences_);
-      } else {
-        return sourceReferencesBuilder_.getMessageList();
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public int getSourceReferencesCount() {
-      if (sourceReferencesBuilder_ == null) {
-        return sourceReferences_.size();
-      } else {
-        return sourceReferencesBuilder_.getCount();
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public com.google.appengine.logging.v1.SourceReference getSourceReferences(int index) {
-      if (sourceReferencesBuilder_ == null) {
-        return sourceReferences_.get(index);
-      } else {
-        return sourceReferencesBuilder_.getMessage(index);
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder setSourceReferences(
-        int index, com.google.appengine.logging.v1.SourceReference value) {
-      if (sourceReferencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.set(index, value);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.setMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder setSourceReferences(
-        int index, com.google.appengine.logging.v1.SourceReference.Builder builderForValue) {
-      if (sourceReferencesBuilder_ == null) {
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.set(index, builderForValue.build());
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.setMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder addSourceReferences(com.google.appengine.logging.v1.SourceReference value) {
-      if (sourceReferencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.add(value);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.addMessage(value);
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder addSourceReferences(
-        int index, com.google.appengine.logging.v1.SourceReference value) {
-      if (sourceReferencesBuilder_ == null) {
-        if (value == null) {
-          throw new NullPointerException();
-        }
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.add(index, value);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.addMessage(index, value);
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder addSourceReferences(
-        com.google.appengine.logging.v1.SourceReference.Builder builderForValue) {
-      if (sourceReferencesBuilder_ == null) {
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.add(builderForValue.build());
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.addMessage(builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder addSourceReferences(
-        int index, com.google.appengine.logging.v1.SourceReference.Builder builderForValue) {
-      if (sourceReferencesBuilder_ == null) {
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.add(index, builderForValue.build());
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.addMessage(index, builderForValue.build());
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder addAllSourceReferences(
-        java.lang.Iterable<? extends com.google.appengine.logging.v1.SourceReference> values) {
-      if (sourceReferencesBuilder_ == null) {
-        ensureSourceReferencesIsMutable();
-        com.google.protobuf.AbstractMessageLite.Builder.addAll(values, sourceReferences_);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.addAllMessages(values);
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder clearSourceReferences() {
-      if (sourceReferencesBuilder_ == null) {
-        sourceReferences_ = java.util.Collections.emptyList();
-        bitField0_ = (bitField0_ & ~0x00000001);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.clear();
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public Builder removeSourceReferences(int index) {
-      if (sourceReferencesBuilder_ == null) {
-        ensureSourceReferencesIsMutable();
-        sourceReferences_.remove(index);
-        onChanged();
-      } else {
-        sourceReferencesBuilder_.remove(index);
-      }
-      return this;
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public com.google.appengine.logging.v1.SourceReference.Builder getSourceReferencesBuilder(
-        int index) {
-      return getSourceReferencesFieldBuilder().getBuilder(index);
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public com.google.appengine.logging.v1.SourceReferenceOrBuilder getSourceReferencesOrBuilder(
-        int index) {
-      if (sourceReferencesBuilder_ == null) {
-        return sourceReferences_.get(index);
-      } else {
-        return sourceReferencesBuilder_.getMessageOrBuilder(index);
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public java.util.List<? extends com.google.appengine.logging.v1.SourceReferenceOrBuilder>
-        getSourceReferencesOrBuilderList() {
-      if (sourceReferencesBuilder_ != null) {
-        return sourceReferencesBuilder_.getMessageOrBuilderList();
-      } else {
-        return java.util.Collections.unmodifiableList(sourceReferences_);
-      }
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public com.google.appengine.logging.v1.SourceReference.Builder addSourceReferencesBuilder() {
-      return getSourceReferencesFieldBuilder()
-          .addBuilder(com.google.appengine.logging.v1.SourceReference.getDefaultInstance());
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public com.google.appengine.logging.v1.SourceReference.Builder addSourceReferencesBuilder(
-        int index) {
-      return getSourceReferencesFieldBuilder()
-          .addBuilder(index, com.google.appengine.logging.v1.SourceReference.getDefaultInstance());
-    }
-    /**
-     *
-     *
-     * <pre>
-     * Source code that was used to build the executable which has
-     * caused the given error message.
-     * </pre>
-     *
-     * <code>repeated .google.appengine.logging.v1.SourceReference source_references = 4;</code>
-     */
-    public java.util.List<com.google.appengine.logging.v1.SourceReference.Builder>
-        getSourceReferencesBuilderList() {
-      return getSourceReferencesFieldBuilder().getBuilderList();
-    }
-
-    private com.google.protobuf.RepeatedFieldBuilderV3<
-            com.google.appengine.logging.v1.SourceReference,
-            com.google.appengine.logging.v1.SourceReference.Builder,
-            com.google.appengine.logging.v1.SourceReferenceOrBuilder>
-        getSourceReferencesFieldBuilder() {
-      if (sourceReferencesBuilder_ == null) {
-        sourceReferencesBuilder_ =
-            new com.google.protobuf.RepeatedFieldBuilderV3<
-                com.google.appengine.logging.v1.SourceReference,
-                com.google.appengine.logging.v1.SourceReference.Builder,
-                com.google.appengine.logging.v1.SourceReferenceOrBuilder>(
-                sourceReferences_,
-                ((bitField0_ & 0x00000001) != 0),
-                getParentForChildren(),
-                isClean());
-        sourceReferences_ = null;
-      }
-      return sourceReferencesBuilder_;
     }
 
     @java.lang.Override

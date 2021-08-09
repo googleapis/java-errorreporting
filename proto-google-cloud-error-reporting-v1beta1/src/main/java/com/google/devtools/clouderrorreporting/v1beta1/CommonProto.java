@@ -67,33 +67,30 @@ public final class CommonProto {
       "\n8google/devtools/clouderrorreporting/v1"
           + "beta1/common.proto\022+google.devtools.clou"
           + "derrorreporting.v1beta1\032\031google/api/reso"
-          + "urce.proto\032-google/appengine/logging/v1/"
-          + "request_log.proto\032\037google/protobuf/times"
-          + "tamp.proto\032\034google/api/annotations.proto"
-          + "\"\262\002\n\nErrorGroup\022\014\n\004name\030\001 \001(\t\022\020\n\010group_i"
-          + "d\030\002 \001(\t\022S\n\017tracking_issues\030\003 \003(\0132:.googl"
-          + "e.devtools.clouderrorreporting.v1beta1.T"
-          + "rackingIssue\022X\n\021resolution_status\030\005 \001(\0162"
-          + "=.google.devtools.clouderrorreporting.v1"
-          + "beta1.ResolutionStatus:U\352AR\n-clouderrorr"
-          + "eporting.googleapis.com/ErrorGroup\022!proj"
-          + "ects/{project}/groups/{group}\"\034\n\rTrackin"
-          + "gIssue\022\013\n\003url\030\001 \001(\t\"\357\001\n\nErrorEvent\022.\n\nev"
-          + "ent_time\030\001 \001(\0132\032.google.protobuf.Timesta"
-          + "mp\022T\n\017service_context\030\002 \001(\0132;.google.dev"
-          + "tools.clouderrorreporting.v1beta1.Servic"
-          + "eContext\022\017\n\007message\030\003 \001(\t\022J\n\007context\030\005 \001"
-          + "(\01329.google.devtools.clouderrorreporting"
-          + ".v1beta1.ErrorContext\"I\n\016ServiceContext\022"
-          + "\017\n\007service\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\025\n\rres"
-          + "ource_type\030\004 \001(\t\"\222\002\n\014ErrorContext\022U\n\014htt"
-          + "p_request\030\001 \001(\0132?.google.devtools.cloude"
-          + "rrorreporting.v1beta1.HttpRequestContext"
-          + "\022\014\n\004user\030\002 \001(\t\022T\n\017report_location\030\003 \001(\0132"
-          + ";.google.devtools.clouderrorreporting.v1"
-          + "beta1.SourceLocation\022G\n\021source_reference"
-          + "s\030\004 \003(\0132,.google.appengine.logging.v1.So"
-          + "urceReference\"\210\001\n\022HttpRequestContext\022\016\n\006"
+          + "urce.proto\032\037google/protobuf/timestamp.pr"
+          + "oto\032\034google/api/annotations.proto\"\262\002\n\nEr"
+          + "rorGroup\022\014\n\004name\030\001 \001(\t\022\020\n\010group_id\030\002 \001(\t"
+          + "\022S\n\017tracking_issues\030\003 \003(\0132:.google.devto"
+          + "ols.clouderrorreporting.v1beta1.Tracking"
+          + "Issue\022X\n\021resolution_status\030\005 \001(\0162=.googl"
+          + "e.devtools.clouderrorreporting.v1beta1.R"
+          + "esolutionStatus:U\352AR\n-clouderrorreportin"
+          + "g.googleapis.com/ErrorGroup\022!projects/{p"
+          + "roject}/groups/{group}\"\034\n\rTrackingIssue\022"
+          + "\013\n\003url\030\001 \001(\t\"\357\001\n\nErrorEvent\022.\n\nevent_tim"
+          + "e\030\001 \001(\0132\032.google.protobuf.Timestamp\022T\n\017s"
+          + "ervice_context\030\002 \001(\0132;.google.devtools.c"
+          + "louderrorreporting.v1beta1.ServiceContex"
+          + "t\022\017\n\007message\030\003 \001(\t\022J\n\007context\030\005 \001(\01329.go"
+          + "ogle.devtools.clouderrorreporting.v1beta"
+          + "1.ErrorContext\"I\n\016ServiceContext\022\017\n\007serv"
+          + "ice\030\002 \001(\t\022\017\n\007version\030\003 \001(\t\022\025\n\rresource_t"
+          + "ype\030\004 \001(\t\"\311\001\n\014ErrorContext\022U\n\014http_reque"
+          + "st\030\001 \001(\0132?.google.devtools.clouderrorrep"
+          + "orting.v1beta1.HttpRequestContext\022\014\n\004use"
+          + "r\030\002 \001(\t\022T\n\017report_location\030\003 \001(\0132;.googl"
+          + "e.devtools.clouderrorreporting.v1beta1.S"
+          + "ourceLocation\"\210\001\n\022HttpRequestContext\022\016\n\006"
           + "method\030\001 \001(\t\022\013\n\003url\030\002 \001(\t\022\022\n\nuser_agent\030"
           + "\003 \001(\t\022\020\n\010referrer\030\004 \001(\t\022\034\n\024response_stat"
           + "us_code\030\005 \001(\005\022\021\n\tremote_ip\030\006 \001(\t\"O\n\016Sour"
@@ -115,7 +112,6 @@ public final class CommonProto {
             descriptorData,
             new com.google.protobuf.Descriptors.FileDescriptor[] {
               com.google.api.ResourceProto.getDescriptor(),
-              com.google.appengine.logging.v1.RequestLogProto.getDescriptor(),
               com.google.protobuf.TimestampProto.getDescriptor(),
               com.google.api.AnnotationsProto.getDescriptor(),
             });
@@ -157,7 +153,7 @@ public final class CommonProto {
         new com.google.protobuf.GeneratedMessageV3.FieldAccessorTable(
             internal_static_google_devtools_clouderrorreporting_v1beta1_ErrorContext_descriptor,
             new java.lang.String[] {
-              "HttpRequest", "User", "ReportLocation", "SourceReferences",
+              "HttpRequest", "User", "ReportLocation",
             });
     internal_static_google_devtools_clouderrorreporting_v1beta1_HttpRequestContext_descriptor =
         getDescriptor().getMessageTypes().get(5);
@@ -181,7 +177,6 @@ public final class CommonProto {
     com.google.protobuf.Descriptors.FileDescriptor.internalUpdateFileDescriptor(
         descriptor, registry);
     com.google.api.ResourceProto.getDescriptor();
-    com.google.appengine.logging.v1.RequestLogProto.getDescriptor();
     com.google.protobuf.TimestampProto.getDescriptor();
     com.google.api.AnnotationsProto.getDescriptor();
   }
