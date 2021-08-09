@@ -42,6 +42,13 @@ import javax.annotation.Generated;
  * <p>This class provides the ability to make remote calls to the backing service through method
  * calls that map to API methods. Sample code to get started:
  *
+ * <pre>{@code
+ * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+ *   ProjectName projectName = ProjectName.of("[PROJECT]");
+ *   DeleteEventsResponse response = errorStatsServiceClient.deleteEvents(projectName);
+ * }
+ * }</pre>
+ *
  * <p>Note: close() needs to be called on the ErrorStatsServiceClient object to clean up resources
  * such as threads. In the example above, try-with-resources is used, which automatically calls
  * close().
@@ -149,6 +156,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Lists the specified groups.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ProjectName projectName = ProjectName.of("[PROJECT]");
+   *   QueryTimeRange timeRange = QueryTimeRange.newBuilder().build();
+   *   for (ErrorGroupStats element :
+   *       errorStatsServiceClient.listGroupStats(projectName, timeRange).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
+   *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
    *     `{projectNumber}` can be found in the [Google Cloud
@@ -176,6 +196,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Lists the specified groups.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   String projectName = ProjectName.of("[PROJECT]").toString();
+   *   QueryTimeRange timeRange = QueryTimeRange.newBuilder().build();
+   *   for (ErrorGroupStats element :
+   *       errorStatsServiceClient.listGroupStats(projectName, timeRange).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
    *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}` or `projects/{projectNumber}`, where `{projectID}` and
@@ -205,6 +238,27 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Lists the specified groups.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListGroupStatsRequest request =
+   *       ListGroupStatsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .addAllGroupId(new ArrayList<String>())
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setTimedCountDuration(Duration.newBuilder().build())
+   *           .setAlignmentTime(Timestamp.newBuilder().build())
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
+   *   for (ErrorGroupStats element : errorStatsServiceClient.listGroupStats(request).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
+   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -217,6 +271,28 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    * Lists the specified groups.
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListGroupStatsRequest request =
+   *       ListGroupStatsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .addAllGroupId(new ArrayList<String>())
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setTimedCountDuration(Duration.newBuilder().build())
+   *           .setAlignmentTime(Timestamp.newBuilder().build())
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
+   *   ApiFuture<ErrorGroupStats> future =
+   *       errorStatsServiceClient.listGroupStatsPagedCallable().futureCall(request);
+   *   // Do something.
+   *   for (ErrorGroupStats element : future.get().iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
    */
   public final UnaryCallable<ListGroupStatsRequest, ListGroupStatsPagedResponse>
       listGroupStatsPagedCallable() {
@@ -228,6 +304,24 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    * Lists the specified groups.
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   while (true) {
+   *     ListGroupStatsResponse response =
+   *         errorStatsServiceClient.listGroupStatsCallable().call(request);
+   *     for (ErrorGroupStats element : response.getResponsesList()) {
+   *       // doThingsWith(element);
+   *     }
+   *     String nextPageToken = response.getNextPageToken();
+   *     if (!Strings.isNullOrEmpty(nextPageToken)) {
+   *       request = request.toBuilder().setPageToken(nextPageToken).build();
+   *     } else {
+   *       break;
+   *     }
+   *   }
+   * }
+   * }</pre>
    */
   public final UnaryCallable<ListGroupStatsRequest, ListGroupStatsResponse>
       listGroupStatsCallable() {
@@ -237,6 +331,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Lists the specified events.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ProjectName projectName = ProjectName.of("[PROJECT]");
+   *   String groupId = "groupId293428218";
+   *   for (ErrorEvent element :
+   *       errorStatsServiceClient.listEvents(projectName, groupId).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
    *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
@@ -258,6 +365,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Lists the specified events.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   String projectName = ProjectName.of("[PROJECT]").toString();
+   *   String groupId = "groupId293428218";
+   *   for (ErrorEvent element :
+   *       errorStatsServiceClient.listEvents(projectName, groupId).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
+   *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
    *     ID](https://support.google.com/cloud/answer/6158840).
@@ -275,6 +395,25 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Lists the specified events.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListEventsRequest request =
+   *       ListEventsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .setGroupId("groupId293428218")
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
+   *   for (ErrorEvent element : errorStatsServiceClient.listEvents(request).iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
+   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -287,6 +426,26 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    * Lists the specified events.
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ListEventsRequest request =
+   *       ListEventsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .setGroupId("groupId293428218")
+   *           .setServiceFilter(ServiceContextFilter.newBuilder().build())
+   *           .setTimeRange(QueryTimeRange.newBuilder().build())
+   *           .setPageSize(883849137)
+   *           .setPageToken("pageToken873572522")
+   *           .build();
+   *   ApiFuture<ErrorEvent> future =
+   *       errorStatsServiceClient.listEventsPagedCallable().futureCall(request);
+   *   // Do something.
+   *   for (ErrorEvent element : future.get().iterateAll()) {
+   *     // doThingsWith(element);
+   *   }
+   * }
+   * }</pre>
    */
   public final UnaryCallable<ListEventsRequest, ListEventsPagedResponse> listEventsPagedCallable() {
     return stub.listEventsPagedCallable();
@@ -297,6 +456,23 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    * Lists the specified events.
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   while (true) {
+   *     ListEventsResponse response = errorStatsServiceClient.listEventsCallable().call(request);
+   *     for (ErrorEvent element : response.getResponsesList()) {
+   *       // doThingsWith(element);
+   *     }
+   *     String nextPageToken = response.getNextPageToken();
+   *     if (!Strings.isNullOrEmpty(nextPageToken)) {
+   *       request = request.toBuilder().setPageToken(nextPageToken).build();
+   *     } else {
+   *       break;
+   *     }
+   *   }
+   * }
+   * }</pre>
    */
   public final UnaryCallable<ListEventsRequest, ListEventsResponse> listEventsCallable() {
     return stub.listEventsCallable();
@@ -305,6 +481,15 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   // AUTO-GENERATED DOCUMENTATION AND METHOD.
   /**
    * Deletes all error events of a given project.
+   *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   ProjectName projectName = ProjectName.of("[PROJECT]");
+   *   DeleteEventsResponse response = errorStatsServiceClient.deleteEvents(projectName);
+   * }
+   * }</pre>
    *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
@@ -324,6 +509,15 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Deletes all error events of a given project.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   String projectName = ProjectName.of("[PROJECT]").toString();
+   *   DeleteEventsResponse response = errorStatsServiceClient.deleteEvents(projectName);
+   * }
+   * }</pre>
+   *
    * @param projectName Required. The resource name of the Google Cloud Platform project. Written as
    *     `projects/{projectID}`, where `{projectID}` is the [Google Cloud Platform project
    *     ID](https://support.google.com/cloud/answer/6158840).
@@ -340,6 +534,18 @@ public class ErrorStatsServiceClient implements BackgroundResource {
   /**
    * Deletes all error events of a given project.
    *
+   * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   DeleteEventsRequest request =
+   *       DeleteEventsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .build();
+   *   DeleteEventsResponse response = errorStatsServiceClient.deleteEvents(request);
+   * }
+   * }</pre>
+   *
    * @param request The request object containing all of the parameters for the API call.
    * @throws com.google.api.gax.rpc.ApiException if the remote call fails
    */
@@ -352,6 +558,19 @@ public class ErrorStatsServiceClient implements BackgroundResource {
    * Deletes all error events of a given project.
    *
    * <p>Sample code:
+   *
+   * <pre>{@code
+   * try (ErrorStatsServiceClient errorStatsServiceClient = ErrorStatsServiceClient.create()) {
+   *   DeleteEventsRequest request =
+   *       DeleteEventsRequest.newBuilder()
+   *           .setProjectName(ProjectName.of("[PROJECT]").toString())
+   *           .build();
+   *   ApiFuture<DeleteEventsResponse> future =
+   *       errorStatsServiceClient.deleteEventsCallable().futureCall(request);
+   *   // Do something.
+   *   DeleteEventsResponse response = future.get();
+   * }
+   * }</pre>
    */
   public final UnaryCallable<DeleteEventsRequest, DeleteEventsResponse> deleteEventsCallable() {
     return stub.deleteEventsCallable();
