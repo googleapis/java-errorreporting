@@ -22,7 +22,6 @@ import com.google.api.gax.core.BackgroundResourceAggregation;
 import com.google.api.gax.grpc.GrpcCallSettings;
 import com.google.api.gax.grpc.GrpcStubCallableFactory;
 import com.google.api.gax.rpc.ClientContext;
-import com.google.api.gax.rpc.RequestParamsExtractor;
 import com.google.api.gax.rpc.UnaryCallable;
 import com.google.common.collect.ImmutableMap;
 import com.google.devtools.clouderrorreporting.v1beta1.ErrorGroup;
@@ -32,7 +31,6 @@ import com.google.longrunning.stub.GrpcOperationsStub;
 import io.grpc.MethodDescriptor;
 import io.grpc.protobuf.ProtoUtils;
 import java.io.IOException;
-import java.util.Map;
 import java.util.concurrent.TimeUnit;
 import javax.annotation.Generated;
 
@@ -115,26 +113,20 @@ public class GrpcErrorGroupServiceStub extends ErrorGroupServiceStub {
         GrpcCallSettings.<GetGroupRequest, ErrorGroup>newBuilder()
             .setMethodDescriptor(getGroupMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<GetGroupRequest>() {
-                  @Override
-                  public Map<String, String> extract(GetGroupRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("group_name", String.valueOf(request.getGroupName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("group_name", String.valueOf(request.getGroupName()));
+                  return params.build();
                 })
             .build();
     GrpcCallSettings<UpdateGroupRequest, ErrorGroup> updateGroupTransportSettings =
         GrpcCallSettings.<UpdateGroupRequest, ErrorGroup>newBuilder()
             .setMethodDescriptor(updateGroupMethodDescriptor)
             .setParamsExtractor(
-                new RequestParamsExtractor<UpdateGroupRequest>() {
-                  @Override
-                  public Map<String, String> extract(UpdateGroupRequest request) {
-                    ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
-                    params.put("group.name", String.valueOf(request.getGroup().getName()));
-                    return params.build();
-                  }
+                request -> {
+                  ImmutableMap.Builder<String, String> params = ImmutableMap.builder();
+                  params.put("group.name", String.valueOf(request.getGroup().getName()));
+                  return params.build();
                 })
             .build();
 
@@ -165,7 +157,13 @@ public class GrpcErrorGroupServiceStub extends ErrorGroupServiceStub {
 
   @Override
   public final void close() {
-    shutdown();
+    try {
+      backgroundResources.close();
+    } catch (RuntimeException e) {
+      throw e;
+    } catch (Exception e) {
+      throw new IllegalStateException("Failed to close resource", e);
+    }
   }
 
   @Override

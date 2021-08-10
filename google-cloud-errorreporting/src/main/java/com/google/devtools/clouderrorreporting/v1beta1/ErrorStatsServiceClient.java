@@ -16,7 +16,6 @@
 
 package com.google.devtools.clouderrorreporting.v1beta1;
 
-import com.google.api.core.ApiFunction;
 import com.google.api.core.ApiFuture;
 import com.google.api.core.ApiFutures;
 import com.google.api.core.BetaApi;
@@ -647,12 +646,7 @@ public class ErrorStatsServiceClient implements BackgroundResource {
           ListGroupStatsPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
           futurePage,
-          new ApiFunction<ListGroupStatsPage, ListGroupStatsPagedResponse>() {
-            @Override
-            public ListGroupStatsPagedResponse apply(ListGroupStatsPage input) {
-              return new ListGroupStatsPagedResponse(input);
-            }
-          },
+          input -> new ListGroupStatsPagedResponse(input),
           MoreExecutors.directExecutor());
     }
 
@@ -727,14 +721,7 @@ public class ErrorStatsServiceClient implements BackgroundResource {
       ApiFuture<ListEventsPage> futurePage =
           ListEventsPage.createEmptyPage().createPageAsync(context, futureResponse);
       return ApiFutures.transform(
-          futurePage,
-          new ApiFunction<ListEventsPage, ListEventsPagedResponse>() {
-            @Override
-            public ListEventsPagedResponse apply(ListEventsPage input) {
-              return new ListEventsPagedResponse(input);
-            }
-          },
-          MoreExecutors.directExecutor());
+          futurePage, input -> new ListEventsPagedResponse(input), MoreExecutors.directExecutor());
     }
 
     private ListEventsPagedResponse(ListEventsPage page) {

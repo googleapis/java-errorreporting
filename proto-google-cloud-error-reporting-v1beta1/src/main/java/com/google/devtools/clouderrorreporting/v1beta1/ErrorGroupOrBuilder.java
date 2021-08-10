@@ -135,4 +135,33 @@ public interface ErrorGroupOrBuilder
    */
   com.google.devtools.clouderrorreporting.v1beta1.TrackingIssueOrBuilder getTrackingIssuesOrBuilder(
       int index);
+
+  /**
+   *
+   *
+   * <pre>
+   * Error group's resolution status.
+   * An unspecified resolution status will be interpreted as OPEN
+   * </pre>
+   *
+   * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
+   * </code>
+   *
+   * @return The enum numeric value on the wire for resolutionStatus.
+   */
+  int getResolutionStatusValue();
+  /**
+   *
+   *
+   * <pre>
+   * Error group's resolution status.
+   * An unspecified resolution status will be interpreted as OPEN
+   * </pre>
+   *
+   * <code>.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus resolution_status = 5;
+   * </code>
+   *
+   * @return The resolutionStatus.
+   */
+  com.google.devtools.clouderrorreporting.v1beta1.ResolutionStatus getResolutionStatus();
 }
