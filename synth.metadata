@@ -4,7 +4,7 @@
       "git": {
         "name": ".",
         "remote": "https://github.com/googleapis/java-errorreporting.git",
-        "sha": "764c3594f522c890fced417732df82241604c919"
+        "sha": "bfb918c9b59e75607bc9abac413a8d3358791d63"
       }
     },
     {
@@ -19,7 +19,7 @@
       "git": {
         "name": "synthtool",
         "remote": "https://github.com/googleapis/synthtool.git",
-        "sha": "ff01716e16d2c6e87eaf87197b753ac9fcbbed5d"
+        "sha": "9a238a0623879c3de129a376c6085d4a862f6eb9"
       }
     }
   ],
@@ -44,6 +44,7 @@
     ".github/generated-files-bot.yml",
     ".github/readme/synth.py",
     ".github/release-please.yml",
+    ".github/release-trigger.yml",
     ".github/snippet-bot.yml",
     ".github/sync-repo-settings.yaml",
     ".github/trusted-contribution.yml",
