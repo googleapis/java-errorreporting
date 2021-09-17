@@ -10,7 +10,7 @@
   <parent>
     <groupId>com.google.cloud</groupId>
     <artifactId>google-cloud-errorreporting-parent</artifactId>
-    <version>0.122.5-beta</version><!-- {x-version-update:google-cloud-errorreporting:current} -->
+    <version>0.122.6-beta-SNAPSHOT</version><!-- {x-version-update:google-cloud-errorreporting:current} -->
   </parent>
   <dependencies>
     <dependency>
