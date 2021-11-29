@@ -65,8 +65,7 @@ public final class CommonProto {
   static {
     java.lang.String[] descriptorData = {
       "\n"
-          + "8google/devtools/clouderrorreporting/v1beta1/common.proto\022+google.devtools.clou"
-          + "derrorreporting.v1beta1\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\262\002\n\n"
+          + "8google/devtools/clouderrorreporting/v1beta1/common.proto\022+google.devtools.clouderrorreporting.v1beta1\032\031google/api/resource.proto\032\037google/protobuf/timestamp.proto\032\034google/api/annotations.proto\"\262\002\n\n"
           + "ErrorGroup\022\014\n"
           + "\004name\030\001 \001(\t\022\020\n"
           + "\010group_id\030\002 \001(\t\022S\n"
