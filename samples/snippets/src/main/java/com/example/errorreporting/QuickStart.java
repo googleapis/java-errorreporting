@@ -58,8 +58,7 @@ public class QuickStart {
 
       // Report a custom error event
       ReportedErrorEvent customErrorEvent =
-          ReportedErrorEvent.getDefaultInstance()
-              .toBuilder()
+          ReportedErrorEvent.getDefaultInstance().toBuilder()
               .setMessage("custom error event")
               .setContext(errorContext)
               .build();
