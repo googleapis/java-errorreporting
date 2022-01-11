@@ -71,20 +71,20 @@ If you are using Maven without BOM, add this to your dependencies:
 If you are using Gradle 5.x or later, add this to your dependencies
 
 ```Groovy
-implementation platform('com.google.cloud:libraries-bom:24.1.2')
+implementation platform('com.google.cloud:libraries-bom:24.2.0')
 
 implementation 'com.google.cloud:google-cloud-errorreporting'
 ```
 If you are using Gradle without BOM, add this to your dependencies
 
 ```Groovy
-implementation 'com.google.cloud:google-cloud-errorreporting:0.122.10-beta'
+implementation 'com.google.cloud:google-cloud-errorreporting:0.122.11-beta'
 ```
 
 If you are using SBT, add this to your dependencies
 
 ```Scala
-libraryDependencies += "com.google.cloud" % "google-cloud-errorreporting" % "0.122.10-beta"
+libraryDependencies += "com.google.cloud" % "google-cloud-errorreporting" % "0.122.11-beta"
 ```
 
 ## Authentication
