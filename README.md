@@ -1,4 +1,4 @@
-# Google Cloud Error Reporting Client for Java
+# Google Error Reporting Client for Java
 
 Java idiomatic client for [Error Reporting][product-docs].
 
@@ -110,13 +110,13 @@ You will need a [Google Cloud Platform Console][developer-console] project with 
 You'll need to obtain the `google-cloud-errorreporting` library.  See the [Quickstart](#quickstart) section
 to add `google-cloud-errorreporting` as a dependency in your code.
 
-## About Cloud Error Reporting
+## About Error Reporting
 
 
-[Cloud Error Reporting][product-docs] counts, analyzes, and aggregates the crashes in your running cloud services. A centralized error management interface displays the results with sorting and filtering capabilities. A dedicated view shows the error details: time chart, occurrences, affected user count, first- and last-seen dates and a cleaned exception stack trace. Opt in to receive email and mobile alerts on new errors.
+[Error Reporting][product-docs] counts, analyzes, and aggregates the crashes in your running cloud services. A centralized error management interface displays the results with sorting and filtering capabilities. A dedicated view shows the error details: time chart, occurrences, affected user count, first- and last-seen dates and a cleaned exception stack trace. Opt in to receive email and mobile alerts on new errors.
 
-See the [Cloud Error Reporting client library docs][javadocs] to learn how to
-use this Cloud Error Reporting Client Library.
+See the [Error Reporting client library docs][javadocs] to learn how to
+use this Error Reporting Client Library.
 
 
 
@@ -138,7 +138,7 @@ To get help, follow the instructions in the [shared Troubleshooting document][tr
 
 ## Transport
 
-Cloud Error Reporting uses gRPC for the transport layer.
+Error Reporting uses gRPC for the transport layer.
 
 ## Supported Java Versions
 
