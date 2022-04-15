@@ -1,4 +1,4 @@
-# Google Error Reporting Client for Java
+# Error Reporting Client for Java
 
 Java idiomatic client for [Error Reporting][product-docs].
 
