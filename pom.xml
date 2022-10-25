@@ -61,7 +61,7 @@
       <dependency>
         <groupId>com.google.cloud</groupId>
         <artifactId>google-cloud-errorreporting</artifactId>
-        <version>0.125.0-beta</version><!-- {x-version-update:google-cloud-errorreporting:current} -->
+        <version>0.126.0-beta</version><!-- {x-version-update:google-cloud-errorreporting:current} -->
       </dependency>
 
       <dependency>
