@@ -75,7 +75,7 @@ for library in s.get_staging_dirs():
     s.move(library)
 
 s.remove_staging_dirs()
-java.common_templates(excludes=['.github/auto-label.yaml'])
+java.common_templates(excludes=['.github/auto-label.yaml', '.github/workflows/samples.yaml', 'samples/**'])
 
 # --------------------------------------------------------------------------
 # Modify test configs
