@@ -1,5 +1,19 @@
 # Changelog
 
+## [0.124.16](https://github.com/googleapis/java-errorreporting/compare/v0.124.15...v0.124.16) (2023-05-31)
+
+
+### Dependencies
+
+* Update dependency com.google.api.grpc:proto-google-cloud-error-reporting-v1beta1 to v0.91.0 ([#1009](https://github.com/googleapis/java-errorreporting/issues/1009)) ([43e6603](https://github.com/googleapis/java-errorreporting/commit/43e6603dcac49eb54608c1c9dee66ec94001c8c4))
+* Update dependency com.google.api.grpc:proto-google-cloud-error-reporting-v1beta1 to v0.92.0 ([#1019](https://github.com/googleapis/java-errorreporting/issues/1019)) ([46918d4](https://github.com/googleapis/java-errorreporting/commit/46918d4f86a4c573a75b5c05cbb508f698109e76))
+* Update dependency com.google.cloud:google-cloud-core to v2.8.22 ([#1012](https://github.com/googleapis/java-errorreporting/issues/1012)) ([457b095](https://github.com/googleapis/java-errorreporting/commit/457b0957b2509362091fe4d92e8b21c2c2daf19b))
+* Update dependency com.google.cloud:google-cloud-core to v2.8.23 ([#1017](https://github.com/googleapis/java-errorreporting/issues/1017)) ([616c440](https://github.com/googleapis/java-errorreporting/commit/616c440412e7f85a739689ba4ed22c3b195a89ad))
+* Update dependency com.google.cloud:google-cloud-core to v2.8.24 ([#1020](https://github.com/googleapis/java-errorreporting/issues/1020)) ([37642f5](https://github.com/googleapis/java-errorreporting/commit/37642f5ad974ebb8d0b176bbe52f83fbb2ce3755))
+* Update dependency com.google.cloud:google-cloud-core to v2.8.27 ([#1026](https://github.com/googleapis/java-errorreporting/issues/1026)) ([5d718fd](https://github.com/googleapis/java-errorreporting/commit/5d718fd6271b0c8684eaa2edaab5e0847e8af52f))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.5 ([#1013](https://github.com/googleapis/java-errorreporting/issues/1013)) ([7689b58](https://github.com/googleapis/java-errorreporting/commit/7689b5870472921011434c4bf18eea394d873351))
+* Update dependency com.google.cloud:google-cloud-shared-dependencies to v3.0.6 ([#1029](https://github.com/googleapis/java-errorreporting/issues/1029)) ([3b01c86](https://github.com/googleapis/java-errorreporting/commit/3b01c86f25e83862fb5b12250c112078837c0ec0))
+
 ## [0.124.15](https://github.com/googleapis/java-errorreporting/compare/v0.124.14...v0.124.15) (2022-10-10)
 
 
